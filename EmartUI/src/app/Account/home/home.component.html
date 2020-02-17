@@ -1,0 +1,22 @@
+ <div class="header">
+    <h1 text-align="center">Welcome to EMART</h1>
+</div>
+<ul>
+    <li><a [routerLink]="['/Home']">Home</a></li>
+    <li><a [routerLink]="['/Home']">about</a></li>
+    <li><a [routerLink]="['/Home']">Contactus</a></li>
+    <li style="float:right"><a class="active" [routerLink]="['/Home/Login']">Login</a></li>
+    
+    <li style="float:right"> <a class="normal" [routerLink]="['Home']">Logout</a></li>
+    <li style="float:left"><a class="buyer" [routerLink]="['/Buyerlandingpage']">buyer</a></li>
+    <li style="float:left"><a class="buyer" [routerLink]="['/sellerlandingpage']">seller</a></li>
+    
+    
+</ul> 
+  
+  
+
+
+  
+  <router-outlet></router-outlet>
+  
