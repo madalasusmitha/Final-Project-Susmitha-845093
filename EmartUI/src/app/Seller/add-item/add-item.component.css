@@ -1,0 +1,44 @@
+input[type=text],
+input[type=number],
+textarea[type=text]{
+    width: 80%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(190, 38, 122);
+    box-sizing: border-box;
+    border-radius: 30px;
+    
+  }
+  .button1 {background-color: blue;
+    text-decoration-color: white;}
+    .register{
+        border-radius: 5px;
+        background-color:rgb(47, 131, 180);
+        padding: 10px;
+        width: 30%;
+        box-align:center;
+        margin: 300px;
+        float: center;
+        margin-top: 50px ;
+        background-image: url("src/assets/Images/shopping.jpg");
+        background-image: no-repeat;
+        
+    }
+    h3{
+      color:red;
+    }
+    /* .register{
+    background-image: url('src/assets/images/additems.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+    } */
+    label{
+    color:red;
+    right: 20px;
+    }
+    .form{
+        text-align: center;
+        background-color: palevioletred;
+    }

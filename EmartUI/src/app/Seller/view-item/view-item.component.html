@@ -1,1 +1,35 @@
-<p>view-item works!</p>
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="text-center">
+                <input type="text" [(ngModel)]="sellerid" placeholder="Enter Your Seller ID.."/>&nbsp; 
+                <button type="submit" (click)="ViewItems()" class="btn btn-primary mr-1">ViewItems</button>
+            </div>
+               <br/> 
+            <table class="table table-bordered">
+              <tr style="color: whitesmoke;">
+                <th>ItemId</th>
+                <th>Category ID</th>
+                <th>SubCategory ID</th>
+                <th>Seller ID</th>
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Stock</th>
+                <th>Remarks</th>
+              </tr>
+              <tr *ngFor="let item of list" style="color: whitesmoke;">
+                <td>{{item.id}}</td>
+                <td>{{item.categoryId}}</td>
+                <td>{{item.subcategoryId}}</td>
+                <td>{{item.sellerid}}</td>
+                <td>{{item.itemName}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.stockNumber}}</td>
+                <td>{{item.remarks}}</td>
+              </tr>
+            </table>
+          </div>
+     </div>    
+

@@ -48,15 +48,15 @@ const routes: Routes = [{path:'Adminlandingpage',component:AdminLandingPageCompo
 {path:'viewreports',component:ViewReportsComponent}
 
 ]},
-
 {path:'Home',component:HomeComponent,children:[
-
 {path:'Login',component:LoginComponent},
 {path:'RegisterBuyer',component:RegisterBuyerComponent},
 {path:'RegisterSeller',component:RegisterSellerComponent}
 
 ]},
-{path:'',redirectTo:'Login',pathMatch:"full"}
+{path:'',redirectTo:'Login',pathMatch:"full"},
+{path:'RegisterBuyer',component:RegisterBuyerComponent},
+{path:'RegisterSeller',component:RegisterSellerComponent}
 
 ];
 

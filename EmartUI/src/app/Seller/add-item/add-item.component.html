@@ -1,1 +1,73 @@
-<p>add-item works!</p>
+<div class="register" align="center">
+    <h3 align ="center">ADD ITEM</h3>
+        <form [formGroup]="itemForm" (ngSubmit)="onSubmit()" align="center">
+            <table>
+                <tr>
+                    <td><label>Item ID</label></td>
+                    <td><input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
+                    <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                        <div *ngIf="f.id.errors.required">id is required</div>
+                    </div></td>
+                </tr>
+                <tr>
+                    <td><label>Category ID</label></td>
+                    <td><input type="text" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }" />
+                    <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
+                        <div *ngIf="f.categoryid.errors.required">Category id is required</div>
+                        
+                    </div></td>
+                </tr>
+                <tr>
+                    <td><label>SubCategory ID</label></td>
+                    <td><input type="text" formControlName="subcategoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryid.errors }" />
+                    <div *ngIf="submitted && f.subcategoryid.errors" class="invalid-feedback">
+                        <div *ngIf="f.subcategoryid.errors.required"> subcategory id is required</div>
+                    
+                    </div></td>
+                </tr>
+                <tr>
+                    <td><label>Price</label></td>
+                    <td><input type="number" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                    <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                        <div *ngIf="f.price.errors.required">enter price</div>
+                    </div></td>
+                </tr>
+                    <tr>
+                        <td><label>Item Name</label></td>
+                <td><input type="text" formControlName="itemname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.itemname.errors }" />
+                <div *ngIf="submitted && f.itemname.errors" class="invalid-feedback">
+                    <div *ngIf="f.itemname.errors.required"> enter item name</div>
+                </div></td>
+            </tr>
+            <tr>
+                <td><label>Descrption</label></td>
+                <td><textarea type="text" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }"></textarea>
+                <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                    <div *ngIf="f.description.errors.required">enter description</div>
+                </div></td>
+            </tr>
+
+            <tr>
+                <td><label>Stock No</label></td>
+                <td><input type="number" formControlName="StockNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.StockNumber.errors }" />
+                <div *ngIf="submitted && f.StockNumber.errors" class="invalid-feedback">
+                    <div *ngIf="f.StockNumber.errors.required">please enter stock </div>
+                </div></td>
+            </tr>
+            <tr>
+                <td><label>Remarks</label></td>
+                <td><input type="text" formControlName="remarks" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.remarks.errors }" />
+                <div *ngIf="submitted && f.remarks.errors" class="invalid-feedback">
+                    <div *ngIf="f.remarks.errors.required">give remark</div>
+                </div></td>
+            </tr>
+                <div class="text-center">
+                <button class="btn btn-primary mr-1" type="submit" (click)='onSubmit()'>Add</button>
+                <button class="btn btn-primary mr-1" type="reset" (click)='onReset()'>Reset</button>
+            </div>
+        </table>
+        </form>
+</div>
+<router-outlet></router-outlet>
+
+

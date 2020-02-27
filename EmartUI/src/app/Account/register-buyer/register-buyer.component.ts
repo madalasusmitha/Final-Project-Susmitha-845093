@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Buyer } from 'src/app/Models/buyer';
+import { AccountService } from 'src/app/service/account.service';
 
 @Component({
   selector: 'app-register-buyer',
@@ -8,54 +10,60 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./register-buyer.component.css']
 })
 export class RegisterBuyerComponent implements OnInit {
-  registerbuyerform:FormGroup;
-  
+  registerForm:FormGroup;
   id:string;
-  name:string;
-joindate:Date;
-  mobile:number;
-  mail:string;
-  password:string;
-  submitted=false;
+ username:string;
+ password:string;
+ emailid:string;
+mobilenumber:number;
+createddatetime:Date;
+Items:Buyer[];
+item:Buyer;
+submitted=false
 
-
-  constructor(private formBuilder:FormBuilder) {
+  constructor(private formBuilder:FormBuilder,private service:AccountService) {
   }
-    
-  
-
   ngOnInit() {
-    this.registerbuyerform=this.formBuilder.group({
-      id:['',[Validators.required,Validators.pattern("[I][0-9]{5}$")]],
-      name:['',[Validators.required,Validators.pattern("^[A-Z]{5}$")]],
-    joindate:['',Validators.required],
-      mobile:['',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]],
-      mail:['',[Validators.required,Validators.email]],
-      password:['',[Validators.required,Validators.pattern("^[A-Z]{8}[@,3,$,%,&,*]$")]]
+    this.registerForm=this.formBuilder.group({
+      id:['',[Validators.required]],
+      username:['',[Validators.required]],
+      createddatetime:['',Validators.required],
+      mobilenumber:['',[Validators.required]],
+      emailid:['',[Validators.required,Validators.email]],
+      password:['',[Validators.required]]
+
     })
   }
-  get f()
-  
-  {  return this.registerbuyerform.controls;}
-  
+  get f() { return this.registerForm.controls; }
 
   onSubmit() {
+      this.submitted = true;
+      this.Add();
+      
+  }
+  onReset() {
+      this.submitted = false;
+      this.registerForm.reset();
+  }
+  Add()
+  {
+     this.item=new Buyer();
+     this.item.id=this.registerForm.value["id"];
+     this.item.username=this.registerForm.value["username"];
+     this.item.emailid=this.registerForm.value["emailid"];
+     this.item.mobilenumber=this.registerForm.value["mobilenumber"];
+     this.item.password=this.registerForm.value["password"];
+     this.item.createddatetime=this.registerForm.value["createddatetime"];
+     console.log(this.item);
+     this.service.AddBuyer(this.item).subscribe(res=>{
+       console.log('Record Added')
+     },erros=>{
+       console.log(erros)
+     })
 
-    this.submitted=true;
-
-    // stop here if form is invalid
-    if (this.registerbuyerform.invalid) {
-        return;
     }
-
-    // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerbuyerform.value, null, 4));
+  
 }
 
-onReset() {
-    this.submitted = false;
-    this.registerbuyerform.reset();
-}
-}
   
 
