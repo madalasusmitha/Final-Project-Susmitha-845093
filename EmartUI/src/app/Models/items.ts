@@ -1,6 +1,7 @@
 export class Items {
     id:string;
-    categoryid:string;
+    Sid:string;
+    CategoryId:string;
     subcategoryid:string;
     price:number;
     itemname:string;

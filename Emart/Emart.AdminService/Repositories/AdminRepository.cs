@@ -28,5 +28,10 @@ namespace Emart.AdminService.Repositories
             _context.SaveChanges();
 
         }
+
+        public List<Category> GetAllCategories()
+        {
+            return _context.Category.ToList();
+        }
     }
 }

@@ -25,7 +25,7 @@ submitted=false
   }
   ngOnInit() {
     this.registerForm=this.formBuilder.group({
-      id:['',[Validators.required]],
+      // id:['',[Validators.required]],
       username:['',[Validators.required]],
       createddatetime:['',Validators.required],
       mobilenumber:['',[Validators.required]],
@@ -48,7 +48,8 @@ submitted=false
   Add()
   {
      this.item=new Buyer();
-     this.item.id=this.registerForm.value["id"];
+    //  this.item.id=this.registerForm.value["id"];
+    this.item.id='EMARTBUY'+Math.round(Math.random()*100);
      this.item.username=this.registerForm.value["username"];
      this.item.emailid=this.registerForm.value["emailid"];
      this.item.mobilenumber=this.registerForm.value["mobilenumber"];

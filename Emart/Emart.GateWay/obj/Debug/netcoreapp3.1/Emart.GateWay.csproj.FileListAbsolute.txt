@@ -50,11 +50,11 @@ E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\bin\Debug\netcoreapp3.1\run
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.csprojAssemblyReference.cache
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\staticwebassets\Emart.GateWay.StaticWebAssets.Manifest.cache
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\staticwebassets\Emart.GateWay.StaticWebAssets.xml
+E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.MvcApplicationPartsAssemblyInfo.cs
+E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.MvcApplicationPartsAssemblyInfo.cache
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.AssemblyInfoInputs.cache
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.AssemblyInfo.cs
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.RazorTargetAssemblyInfo.cache
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.csproj.CopyComplete
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.dll
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.pdb
-E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.MvcApplicationPartsAssemblyInfo.cs
-E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.MvcApplicationPartsAssemblyInfo.cache

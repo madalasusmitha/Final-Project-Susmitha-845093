@@ -163,6 +163,11 @@ namespace Emart.AccountService.Models
                     .HasMaxLength(500)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Sid)
+                    .HasColumnName("sid")
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.StockNumber)
                     .HasColumnName("stock_number")
                     .HasColumnType("decimal(18, 0)");
@@ -176,6 +181,11 @@ namespace Emart.AccountService.Models
                     .WithMany(p => p.Items)
                     .HasForeignKey(d => d.CategoryId)
                     .HasConstraintName("FK__Items__category___1DE57479");
+
+                entity.HasOne(d => d.S)
+                    .WithMany(p => p.Items)
+                    .HasForeignKey(d => d.Sid)
+                    .HasConstraintName("FK__Items__sid__34C8D9D1");
 
                 entity.HasOne(d => d.Subcategory)
                     .WithMany(p => p.Items)

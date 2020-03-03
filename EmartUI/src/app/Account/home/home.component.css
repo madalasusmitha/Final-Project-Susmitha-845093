@@ -8,6 +8,14 @@
       position: sticky;
       top: 0;
     }
+    .card{
+      background-image: url('src/assets/Images/login1.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background:cover;
+      height: 1000%;
+      font-family: 'Numans', sans-serif;
+      }
     li {
       float: left;
     }

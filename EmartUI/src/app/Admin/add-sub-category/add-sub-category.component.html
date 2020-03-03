@@ -1,51 +1,61 @@
 <p>add-sub-category works!</p>
-<div class="card ">
-    <div class="card-body">
+<div class="card m-1 " style="width:500px;align-items: center;">
+    <h5 class="card-header text-center">Add SubCategory</h5>
+    <div class="card-body" >
         <form class="form-3" [formGroup]="addSubcategoryform" (ngSubmit)="onSubmit()">
-            <div class="form-group ">
+            <div class="form-group col-md-5 offset-4 ">
                 <label>SubCategoryID</label>
                 <input type="text" formControlName="subcategoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryid.errors }">
                    <div *ngIf="submitted && f.subcategoryid.errors" class="invalid-feedback">
                     <div *ngIf="f.subcategoryid.errors.required">ID is required</div>
                 </div>
        </div>
-       <div class="form-group ">
-        <label>subcategoryname</label>
+       <div class="form-group col-md-5 offset-4">
+        <label>Category:</label>
+        <select formControlName="categoryid" class="form-control">
+          <option *ngFor="let item of list1" value={{item.categoryId}}>{{item.categoryName}}</option>
+      </select>
+
+        <!-- <input type="text" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }" /> -->
+        <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
+            <div *ngIf="f.categoryid.errors.required">ID is required</div>
+            <div *ngIf="f.categoryid.errors.pattern">Enter ID</div>
+        </div>
+      </div>
+
+       <div class="form-group col-md-5 offset-4">
+        <label>Sub Category Name:</label>
         <input type="text" formControlName="subcategoryname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryname.errors }" />
         <div *ngIf="submitted && f.subcategoryname.errors" class="invalid-feedback">
-            <div *ngIf="f.subcategoryname.errors.required">Name is required</div>
-            
+            <div *ngIf="f.subcategoryname.errors.required">SubCategory Name is required</div>
+            <div *ngIf="f.subcategoryname.errors.pattern"></div>
         </div>
-    </div>
-            <div class="form-group ">
-                    <label>CategoryID</label>
-                    <input type="text" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }">
-                       <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
-                        <div *ngIf="f.categoryid.errors.required">ID is required</div>
-                    </div>
-           </div>
+       </div>
     
-         <div class="form-group ">
+
+       
+         <div class="form-group col-md-5 offset-4 ">
             <label>briefdetails</label>
             <textarea type="text" formControlName="briefdetails" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.briefdetails.errors }" ></textarea>
             <div *ngIf="submitted && f.briefdetails.errors" class="invalid-feedback">
                 <div *ngIf="f.briefdetails.errors.required">Name is required</div>  
             </div>
-            <div class="form-group ">
+         </div>
+
+            <div class="form-group col-md-5 offset-4 ">
                 <label>GST</label>
-                <input type="number" formControlName="GST" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.GST.errors }">
+                <input type="text" formControlName="GST" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.GST.errors }">
                    <div *ngIf="submitted && f.GST.errors" class="invalid-feedback">
                     <div *ngIf="f.GST.errors.required">ID is required</div>
-                </div>
-       </div>
-            
-            
-         </div>
-                 <div class="text-center">
-                <button class="btn btn-primary mr-1" type="submit" (click)="onSubmit()">Submit</button>
-                <button class="btn btn-secondary mr-1" type="reset" (click)="onReset()">Reset</button>
-
+                    </div>
+            </div>
+       
+         <div class="form-group col-md-5 offset-4 ">
+                 <div class="text-center" col-md-5 offset-4>
+                <button class="btn btn-primary mr-1" type="submit">Submit</button>
+                <button class="btn btn-danger" type="reset" (click)="onReset()">Reset</button>
           </div>
+         </div>
         </form>
     </div>
 </div>

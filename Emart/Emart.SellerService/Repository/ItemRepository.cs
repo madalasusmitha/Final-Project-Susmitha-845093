@@ -35,13 +35,15 @@ namespace Emart.SellerService.Repository
             return _context.Items.Find(itemid);
         }
 
+       
+
         public void Updateitem(Items obj)
         {
             _context.Items.Update(obj);
             _context.SaveChanges();
         }
 
-        public List<Items> viewitems(string sid)
+        public List<Items> viewitems()
         {
             return _context.Items.ToList();
         }

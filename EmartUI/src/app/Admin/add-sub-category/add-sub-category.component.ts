@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubCategory } from 'src/app/Models/sub-category';
+import{Category} from 'src/app/Models/category';
 import { FormGroup,FormBuilder,Validators} from '@angular/forms';
 import { AdminService } from 'src/app/service/admin.service';
 
@@ -10,11 +11,19 @@ import { AdminService } from 'src/app/service/admin.service';
 })
 export class AddSubCategoryComponent implements OnInit {
   submitted=false;
-  list:SubCategory;
+  
   item:SubCategory;
+  list1:Category[];
   addSubcategoryform: FormGroup;
 
-  constructor(private builder:FormBuilder,private service:AdminService) { }
+  constructor(private builder:FormBuilder,private service:AdminService) { 
+    this.item=new SubCategory();
+    this.service.GetAllCategories().subscribe(res=>{
+      this.list1=res;
+      console.log(this.list1);
+    })
+
+  }
 
   ngOnInit() {
     this.addSubcategoryform=this.builder.group({
@@ -53,6 +62,5 @@ export class AddSubCategoryComponent implements OnInit {
        console.log(erros)
      })
   }
-
-
+  
 }

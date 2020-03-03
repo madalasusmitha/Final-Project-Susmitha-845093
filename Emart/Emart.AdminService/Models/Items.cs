@@ -19,8 +19,10 @@ namespace Emart.AdminService.Models
         public string Description { get; set; }
         public decimal StockNumber { get; set; }
         public string Remarks { get; set; }
+        public string Sid { get; set; }
 
         public virtual Category Category { get; set; }
+        public virtual Seller S { get; set; }
         public virtual SubCategory Subcategory { get; set; }
         public virtual ICollection<Discounts> Discounts { get; set; }
         public virtual ICollection<PurchaseHistory> PurchaseHistory { get; set; }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Seller } from 'src/app/Models/seller';
+import { AccountService } from 'src/app/service/account.service';
 
 @Component({
   selector: 'app-register-seller',
@@ -8,59 +10,71 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./register-seller.component.css']
 })
 export class RegisterSellerComponent implements OnInit {
-  registerbuyerform:FormGroup;
+  registersellerform:FormGroup;
   
   id:string;
-  name:string;
-joindate:Date;
-companyname:string
+  username:string;
+  companyname:string
   mobile:number;
   mail:string;
   password:string;
-  companybrief:string;
-  postaladdress:string;
+  briefaboutcompany:string;
+  postalAddress:string;
   gstin:number;
   website:string
   submitted=false;
+  Items:Seller[];
+item:Seller;
 
-  constructor(private formBuilder:FormBuilder) {
-    this.registerbuyerform=this.formBuilder.group({
-      id:['',[Validators.required,Validators.pattern("[I][0-9]{5}$")]],
-      name:['',[Validators.required,Validators.pattern("^[A-Z]{5}$")]],
-     joindate:['',Validators.required],
-     companyname:['',[Validators.required,Validators.pattern("^[a-z][A-Z]$")]],
-     companybrief:['',[Validators.required,Validators.pattern("^[a-z][A-Z]$")]],
-     postaladdress:['',[Validators.required,Validators.pattern("^[a-z][A-Z]$")]],
-     gstin:['',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]],
-     website:['',[Validators.required,Validators.pattern("/^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/")]],
-     mobile:['',[Validators.required,Validators.pattern("^[6-9][0-9]{9}$")]],
-      mail:['',[Validators.required,Validators.email]],
-      password:['',[Validators.required,Validators.pattern("^[A-Z]{8}[@,3,$,%,&,*]$")]]
+  constructor(private formBuilder:FormBuilder,private service:AccountService) {
+    this.registersellerform=this.formBuilder.group({
+      // id:['',[Validators.required]],
+      username:['',[Validators.required]],
+      companyname:['',[Validators.required]],
+      briefaboutcompany:['',[Validators.required]],
+      postalAddress:['',[Validators.required]],
+      gstin:['',[Validators.required]],
+      website:['',[Validators.required]],
+      contactnumber:['',[Validators.required]],
+      emailid:['',[Validators.required,Validators.email]],
+      password:['',[Validators.required]]
     })
   }
   ngOnInit() {
   }
-  get f()
-  
-  {  return this.registerbuyerform.controls;}
-  
+  get f() { return this.registersellerform.controls; }
 
   onSubmit() {
+      this.submitted = true;
+      this.Add();
+      
+  }
+  onReset() {
+      this.submitted = false;
+      this.registersellerform.reset();
+  }
+  Add()
+  {
+     this.item=new Seller();
+    //  this.item.id=this.registersellerform.value["id"];
+    this.item.id='EMARTSEl'+Math.round(Math.random()*100);
+     this.item.username=this.registersellerform.value["username"];
+     this.item.emailid=this.registersellerform.value["emailid"];
+     this.item.password=this.registersellerform.value["password"];
+     this.item.companyname=this.registersellerform.value["companyname"];
+     this.item.gstin=this.registersellerform.value["gstin"];
+     this.item.briefaboutcompany=this.registersellerform.value["briefaboutcompany"];
+     this.item.postalAddress=this.registersellerform.value["postalAddress"];
+     this.item.website=this.registersellerform.value["website"];
+     this.item.contactnumber=this.registersellerform.value["contactnumber"];
+     console.log(this.item);
+     this.service.AddSeller(this.item).subscribe(res=>{
+       console.log('Record Added')
+     },erros=>{
+       console.log(erros)
+     })
 
-    this.submitted=true;
-
-    // stop here if form is invalid
-    if (this.registerbuyerform.invalid) {
-        return;
-    }
-
-    // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerbuyerform.value, null, 4));
-}
-
-onReset() {
-    this.submitted = false;
-    this.registerbuyerform.reset();
+  
 }
 }
 

@@ -25,7 +25,10 @@ import { RegisterBuyerComponent } from './Account/register-buyer/register-buyer.
 import { RegisterSellerComponent } from './Account/register-seller/register-seller.component';
 import { ViewcartComponent } from './Buyer/viewcart/viewcart.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { HomeComponent } from './Account/home/home.component'
+import { HomeComponent } from './Account/home/home.component';
+import { ViewcategoryComponent } from './Admin/viewcategory/viewcategory.component';
+import { ViewSubcategoryComponent } from './Admin/view-subcategory/view-subcategory.component';
+import { EditprofileComponent } from './Seller/editprofile/editprofile.component'
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { HomeComponent } from './Account/home/home.component'
     RegisterBuyerComponent,
     RegisterSellerComponent,
     ViewcartComponent,
-    HomeComponent
+    HomeComponent,
+    ViewcategoryComponent,
+    ViewSubcategoryComponent,
+    EditprofileComponent
   ],
   imports: [
     BrowserModule,

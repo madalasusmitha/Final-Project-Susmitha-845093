@@ -32,13 +32,14 @@ namespace Emart.SellerService.Controllers
                 return Ok(e.InnerException.Message);
             }
         }
+        
         [HttpGet]
-        [Route("ViewItems/{sid}")]
-        public IActionResult viewitems(string sid)
+        [Route("ViewItems")]
+        public IActionResult viewitems()
         {
             try
             {
-                return Ok(_repo.viewitems(sid));
+                return Ok(_repo.viewitems());
             }
             catch (Exception e)
             {

@@ -10,5 +10,6 @@ namespace Emart.AdminService.Repositories
     {
         void AddSubcategory(SubCategory obj);
         void AddCategory(Category obj);
+        List<Category> GetAllCategories();
     }
 }

@@ -48,9 +48,11 @@ export class AddCategoryComponent implements OnInit {
      console.log(this.item);
      this.service.AddCategory(this.item).subscribe(res=>{
        console.log('Record Added')
+       alert('SUCCESS!! :-)\n\n')
      },erros=>{
        console.log(erros)
      })
+      
   }
 
 }

@@ -6,7 +6,6 @@ const Requestheaders={headers:new HttpHeaders({
   'Content-Type':'application/json',
 })}
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -17,10 +16,26 @@ export class ItemService {
 
 public AddItem(item:Items):Observable<any>
 {
-  return this.http.post<any>(this.url+'AddItem',JSON.stringify(item),Requestheaders)
+  return this.http.post<any>(this.url+'AddItem',item)
 }
-public ViewItems(sellerid:string):Observable<any>
+
+public ViewItems():Observable<Items[]>
 {
-  return this.http.get(this.url+'Item/ViewItems/'+sellerid,Requestheaders);
+   return this.http.get<Items[]>(this.url+'ViewItems',Requestheaders);
 }
+  
+  public UpdateItem(items:Items):Observable<any>
+  {
+     
+     return this.http.put<any>(this.url+'UpdateItem',JSON.stringify(items),Requestheaders)
+  }
+  public DeleteItem(id:number):Observable<any>
+  {
+     
+     return this.http.delete<any>(this.url+'Deleteitem/'+id,Requestheaders)
+  }
+  public GetById(id:number):Observable<Items>
+  {
+    return this.http.get<Items>(this.url+'GetById/'+id,Requestheaders)
+  }
 }

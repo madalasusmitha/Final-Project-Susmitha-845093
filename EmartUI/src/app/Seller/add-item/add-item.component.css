@@ -14,16 +14,16 @@ textarea[type=text]{
     text-decoration-color: white;}
     .register{
         border-radius: 5px;
-        background-color:rgb(47, 131, 180);
+        background-color:wheat;
         padding: 10px;
         width: 30%;
         box-align:center;
         margin: 300px;
         float: center;
         margin-top: 50px ;
-        background-image: url("src/assets/Images/shopping.jpg");
+        /* background-image: url("src/assets/Images/shopping.jpg");
         background-image: no-repeat;
-        
+        background-position: center; */
     }
     h3{
       color:red;
@@ -38,7 +38,7 @@ textarea[type=text]{
     color:red;
     right: 20px;
     }
-    .form{
+    .itemForm{
         text-align: center;
         background-color: palevioletred;
     }

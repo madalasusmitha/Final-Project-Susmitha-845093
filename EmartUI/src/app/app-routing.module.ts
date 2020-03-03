@@ -21,6 +21,8 @@ import { RegisterSellerComponent } from './Account/register-seller/register-sell
 import { LoginComponent } from './Account/login/login.component';
 import { ViewcartComponent } from './Buyer/viewcart/viewcart.component';
 import { HomeComponent } from './Account/home/home.component';
+import { ViewSubcategoryComponent } from './Admin/view-subcategory/view-subcategory.component';
+import { ViewcategoryComponent } from './Admin/viewcategory/viewcategory.component';
 
 
 const routes: Routes = [{path:'Adminlandingpage',component:AdminLandingPageComponent
@@ -29,7 +31,9 @@ const routes: Routes = [{path:'Adminlandingpage',component:AdminLandingPageCompo
 {path:'AddSubCategory',component:AddSubCategoryComponent},
 {path:'blockunblockseller',component:BlockUnblockSellerComponent},
 {path:'blockunblockbuyer',component:BlockUnblockBuyerComponent},
-{path:'dailyreports',component:DailyReportsComponent}
+{path:'dailyreports',component:DailyReportsComponent},
+{path:'viewcategory',component:ViewcategoryComponent},
+{path:'viewSubcategory',component:ViewSubcategoryComponent}
 ]},
 
 {path:'Buyerlandingpage',component:BuyerLandingPageComponent
@@ -49,15 +53,13 @@ const routes: Routes = [{path:'Adminlandingpage',component:AdminLandingPageCompo
 
 ]},
 {path:'Home',component:HomeComponent,children:[
-{path:'Login',component:LoginComponent},
-{path:'RegisterBuyer',component:RegisterBuyerComponent},
-{path:'RegisterSeller',component:RegisterSellerComponent}
-
+{path:'Login',component:LoginComponent}
 ]},
+
 {path:'',redirectTo:'Login',pathMatch:"full"},
+
 {path:'RegisterBuyer',component:RegisterBuyerComponent},
 {path:'RegisterSeller',component:RegisterSellerComponent}
-
 ];
 
 @NgModule({

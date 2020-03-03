@@ -19,7 +19,8 @@ export class AddItemComponent implements OnInit {
   ngOnInit() {
     this.itemForm=this.frombuilder.group({
       id:['',[Validators.required]],
-      categoryid:['',[Validators.required]],
+      Sid:['',[Validators.required]],
+      CategoryId:['',[Validators.required]],
       subcategoryid:['',[Validators.required]],
       price:['',Validators.required],
       itemname:['',Validators.required],
@@ -43,7 +44,8 @@ export class AddItemComponent implements OnInit {
   {
      this.item=new Items();
      this.item.id=this.itemForm.value["id"];
-     this.item.categoryid=this.itemForm.value["categoryid"];
+     this.item.Sid=this.itemForm.value["Sid"];
+     this.item.CategoryId=this.itemForm.value["CategoryId"];
      this.item.subcategoryid=this.itemForm.value["subcategoryid"];
      this.item.itemname=this.itemForm.value["itemname"];
      this.item.price=Number(this.itemForm.value["price"]);

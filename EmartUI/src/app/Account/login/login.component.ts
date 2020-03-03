@@ -19,12 +19,15 @@ export class LoginComponent implements OnInit {
   constructor(private formBuilder:FormBuilder) { 
    }
   ngOnInit() {
+
     this.login1Form=this.formBuilder.group({
       uname:['',Validators.required],
       password:['',Validators.required]
     });
-
-
+  }
+  get f()
+  {
+    return this.login1Form.controls;
   }
   onSubmit()
   {
@@ -44,10 +47,7 @@ export class LoginComponent implements OnInit {
   
     
   }
-  get f()
-  {
-    return this.login1Form.controls;
-  }
+ 
   // onReset()
   // {
   //   this.submit=false;

@@ -9,11 +9,18 @@
                         <div *ngIf="f.id.errors.required">id is required</div>
                     </div></td>
                 </tr>
+                    <tr>
+                        <td><label>Seller ID</label></td>
+                        <td><input type="text" formControlName="Sid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Sid.errors }" />
+                        <div *ngIf="submitted && f.Sid.errors" class="invalid-feedback">
+                            <div *ngIf="f.Sid.errors.required">id is required</div>
+                        </div></td>
+                    </tr>
                 <tr>
                     <td><label>Category ID</label></td>
-                    <td><input type="text" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }" />
-                    <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
-                        <div *ngIf="f.categoryid.errors.required">Category id is required</div>
+                    <td><input type="text" formControlName="CategoryId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.CategoryId.errors }" />
+                    <div *ngIf="submitted && f.CategoryId.errors" class="invalid-feedback">
+                        <div *ngIf="f.CategoryId.errors.required">Category id is required</div>
                         
                     </div></td>
                 </tr>
