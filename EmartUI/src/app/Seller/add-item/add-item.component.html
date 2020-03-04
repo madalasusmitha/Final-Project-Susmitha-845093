@@ -2,36 +2,59 @@
     <h3 align ="center">ADD ITEM</h3>
         <form [formGroup]="itemForm" (ngSubmit)="onSubmit()" align="center">
             <table>
-                <tr>
+                <!-- <tr>
                     <td><label>Item ID</label></td>
                     <td><input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
                     <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
                         <div *ngIf="f.id.errors.required">id is required</div>
                     </div></td>
-                </tr>
-                    <tr>
+                </tr> -->
+                    <!-- <tr>
                         <td><label>Seller ID</label></td>
                         <td><input type="text" formControlName="Sid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Sid.errors }" />
                         <div *ngIf="submitted && f.Sid.errors" class="invalid-feedback">
                             <div *ngIf="f.Sid.errors.required">id is required</div>
                         </div></td>
-                    </tr>
-                <tr>
-                    <td><label>Category ID</label></td>
-                    <td><input type="text" formControlName="CategoryId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.CategoryId.errors }" />
-                    <div *ngIf="submitted && f.CategoryId.errors" class="invalid-feedback">
-                        <div *ngIf="f.CategoryId.errors.required">Category id is required</div>
-                        
-                    </div></td>
-                </tr>
-                <tr>
-                    <td><label>SubCategory ID</label></td>
-                    <td><input type="text" formControlName="subcategoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryid.errors }" />
-                    <div *ngIf="submitted && f.subcategoryid.errors" class="invalid-feedback">
-                        <div *ngIf="f.subcategoryid.errors.required"> subcategory id is required</div>
-                    
-                    </div></td>
-                </tr>
+                    </tr> -->
+                    <tr>
+                        <td><label style="color:red">Choose Category</label></td>
+                        <!-- <input type="text" formControlName="categoryId" class="form-control" /> -->
+                       <td> <select formControlName="categoryId" class="form-control" (change)="GetSubCategory()">
+                             <option *ngFor="let item of clist" value="{{item.categoryId}}">{{item.categoryName}}</option>   
+                        </select></td>
+                       </tr>
+                       <br>
+                       <tr>
+                        <br>
+                        <tr>
+                        <td> <label style="color:red">Choose SubCategory</label></td>
+                         <!-- <input type="text" formControlName="subcategoryId" class="form-control" /> -->
+                          <td> <select formControlName="subcategoryid" class="form-control">
+                             <option *ngFor="let item of sclist" value="{{item.subcategoryId}}">{{item.subcategoryName}}</option>   
+                        </select></td>
+                        </tr>
+                    <!-- <tr >
+                        <td><label for="categoryname" class="label">Category Name</label></td>
+                      <td> <select formControlName="categoryid" class="form-control" (change)="GetAllSubCategories()">
+                        <option *ngFor="let item of categorylist" value={{item.cid}}>{{item.cname}}</option>   
+                   </select></td>
+                    <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
+                        <div *ngIf="f.categoryid.errors.required">Category is required</div>
+                      
+                    </div> 
+                    </tr> -->
+                    <!-- <tr>
+                        <tr>
+                            <td><label for="subcategoryname" class="label">Sub Category Name</label></td>
+                        <td>       <select formControlName="subcategoryid" class="form-control">
+                         <option *ngFor="let item of subcategorylist" value={{item.subid}}>{{item.subname}}</option>   
+                    </select>
+                    </td>
+                               <div *ngIf="submitted && f.subcategoryid.errors" class="invalid-feedback">
+                               <div *ngIf="f.subcategoryid.errors.required">Sub Category is required</div>
+                     </div> 
+                           </tr>
+                            -->
                 <tr>
                     <td><label>Price</label></td>
                     <td><input type="number" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />

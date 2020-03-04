@@ -10,10 +10,10 @@ namespace Emart.AccountService.Repository
 
     {
         
-        bool sellerLogin(string username, string password);
-        bool BuyerLogin(string username, string password);
-        void RegisterSeller(Seller obj);
-        void RegisterBuyer(Buyer obj);
+       public Seller sellerLogin(string username, string password);
+       public Buyer BuyerLogin(string username, string password);
+       public  void RegisterSeller(Seller obj);
+       public  void RegisterBuyer(Buyer obj);
 
     }
 }

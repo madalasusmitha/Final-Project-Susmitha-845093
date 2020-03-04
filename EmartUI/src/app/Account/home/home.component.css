@@ -40,8 +40,9 @@
     
     
     .header{
-        background-color:rgb(204, 44, 191);
-        text-align: center;
+      height: 80px;
+        background-color:rgb(44, 180, 204);
+        text-size-adjust:40px;
         
         
     } 

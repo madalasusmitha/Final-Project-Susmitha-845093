@@ -3,6 +3,8 @@ import { FormBuilder,Validators,FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import {Items} from 'src/app/Models/items';
 import{  ItemService } from 'src/app/service/item.service';
+import { Category } from 'src/app/Models/category';
+import { SubCategory } from 'src/app/Models/sub-category';
 
 @Component({
   selector: 'app-add-item',
@@ -10,16 +12,25 @@ import{  ItemService } from 'src/app/service/item.service';
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit {
-  list:Items[]=[];
+  
   itemForm:FormGroup;
   submitted=false;
+  list1:Items[];
   item:Items;
-  constructor(private frombuilder:FormBuilder ,private service:ItemService) { }
+  clist:Category[];
+  sclist:SubCategory[];
+  constructor(private frombuilder:FormBuilder ,private service:ItemService) { 
+    this.service.GetAllCategories().subscribe(res=>{
+      this.clist=res;
+      console.log(this.clist);
+    })
+
+  }
 
   ngOnInit() {
     this.itemForm=this.frombuilder.group({
-      id:['',[Validators.required]],
-      Sid:['',[Validators.required]],
+      // id:['',[Validators.required]],
+      // Sid:['',[Validators.required]],
       CategoryId:['',[Validators.required]],
       subcategoryid:['',[Validators.required]],
       price:['',Validators.required],
@@ -29,23 +40,31 @@ export class AddItemComponent implements OnInit {
       remarks:['',Validators.required]
     });
   }
-    get f() { return this.itemForm.controls; }
-
-  onSubmit() {
-      this.submitted = true;
-      this.Add();
+  get f(){return this.itemForm.controls;}
+  onSubmit()
+  {
+    this.submitted= true;
+    this.Add();
+    //display form value on success
+    if(this.itemForm.valid)
+    {
+      alert("Success")
+      console.log(JSON.stringify(this.itemForm.value));
       
+    }
   }
   onReset() {
-      this.submitted = false;
-      this.itemForm.reset();
+    this.submitted = false;
+    this.itemForm.reset();
   }
   Add()
   {
      this.item=new Items();
-     this.item.id=this.itemForm.value["id"];
-     this.item.Sid=this.itemForm.value["Sid"];
-     this.item.CategoryId=this.itemForm.value["CategoryId"];
+    //  this.item.id=this.itemForm.value["id"];
+    //  this.item.Sid=this.itemForm.value["Sid"];
+    this.item.id='add'+Math.round(Math.random()*100);
+    this.item.Sid=this.itemForm.value["Sid"];
+    this.item.CategoryId=this.itemForm.value["CategoryId"];
      this.item.subcategoryid=this.itemForm.value["subcategoryid"];
      this.item.itemname=this.itemForm.value["itemname"];
      this.item.price=Number(this.itemForm.value["price"]);
@@ -60,5 +79,14 @@ export class AddItemComponent implements OnInit {
      })
 
     }
+    GetSubCategory()
+  {
+    let cid=this.itemForm.value["categoryid"];
+    console.log(cid);
+    this.service. GetSub(cid).subscribe(res=>{
+      this.sclist=res;
+      console.log(this.sclist);
+    })
+  }
   }
 

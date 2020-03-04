@@ -22,4 +22,12 @@ export class AccountService {
   {
       return this.http.post<any>(this.url+'AddSeller',item);
   }
+  public loginBuyer(username,password):Observable<any>
+  {
+    return this.http.get<any>(this.url+'loginBuyer/'+username+'/'+password,Requestheaders)
+  }
+  public loginseller(username,password):Observable<any>
+  {
+    return this.http.get<any>(this.url+'loginseller/'+username+'/'+password,Requestheaders)
+  }
 }

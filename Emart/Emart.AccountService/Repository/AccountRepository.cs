@@ -15,20 +15,25 @@ namespace Emart.AccountService.Repository
 
         }
 
-        public bool sellerLogin(string username, string password)
+        public Buyer BuyerLogin(string username, string password)
         {
-
-            var c = _context.Seller.SingleOrDefault(e => e.Username == username && e.Password == password);
-           if(c!=null)
-            {
-                
-                return true;
-            }
-           else
-            {
-                return false;
-            }
+            return  _context.Buyer.SingleOrDefault(e => e.Username == username && e.Password == password);
         }
+
+        //public Seller sellerLogin(string username, string password)
+        //{
+
+        //    var c = _context.Seller.SingleOrDefault(e => e.Username == username && e.Password == password);
+        //   if(c!=null)
+        //    {
+
+        //        return true;
+        //    }
+        //   else
+        //    {
+        //        return false;
+        //    }
+        //}
 
         public void RegisterBuyer(Buyer obj)
         {
@@ -42,20 +47,25 @@ namespace Emart.AccountService.Repository
             _context.SaveChanges();
         }
 
-        public bool BuyerLogin(string username, string password)
+        public Seller sellerLogin(string username, string password)
         {
+            return  _context.Seller.SingleOrDefault(e => e.Username == username && e.Password == password);
+        }
 
-             var b = _context.Buyer.SingleOrDefault(e => e.Username == username && e.Password == password);
-            if (b!=null)
-            {
-               
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-           
-        } 
+        ////public bool BuyerLogin(string username, string password)
+        ////{
+
+        ////     var b = _context.Buyer.SingleOrDefault(e => e.Username == username && e.Password == password);
+        ////    if (b!=null)
+        ////    {
+
+        ////        return true;
+        ////    }
+        ////    else
+        ////    {
+        ////        return false;
+        ////    }
+
+        ////} 
     } 
 }

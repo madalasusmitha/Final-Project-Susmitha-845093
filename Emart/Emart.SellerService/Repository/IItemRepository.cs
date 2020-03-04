@@ -9,11 +9,12 @@ namespace Emart.SellerService.Repository
      public interface IItemRepository
     {
         void Additem(Items obj);
-        
         List<Items> viewitems();
         void Deleteitem(string id);
         void Updateitem(Items obj);
         Items Getitem(string itemid);
+        List<Category> GetCategories();
+        List<SubCategory> GetSubCategories(string CategoryId);
 
     }
 }

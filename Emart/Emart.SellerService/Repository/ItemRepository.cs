@@ -30,12 +30,20 @@ namespace Emart.SellerService.Repository
             
         }
 
+        public List<Category> GetCategories()
+        {
+            return _context.Category.ToList();
+        }
+
         public Items Getitem(string itemid)
         {
             return _context.Items.Find(itemid);
         }
 
-       
+        public List<SubCategory> GetSubCategories(string categoryid)
+        { 
+            return _context.SubCategory.Where(e => e.CategoryId == categoryid).ToList();
+        }
 
         public void Updateitem(Items obj)
         {

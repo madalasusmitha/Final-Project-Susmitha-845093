@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient,HttpHeaders} from '@angular/common/http';
 import {Observable} from "Rxjs";
 import { Items } from '../Models/items';
+import { Category } from '../Models/category';
+import { SubCategory } from '../Models/sub-category';
 const Requestheaders={headers:new HttpHeaders({
   'Content-Type':'application/json',
 })}
@@ -27,7 +29,7 @@ public ViewItems():Observable<Items[]>
   public UpdateItem(items:Items):Observable<any>
   {
      
-     return this.http.put<any>(this.url+'UpdateItem',JSON.stringify(items),Requestheaders)
+     return this.http.put<any>(this.url+'UpdateItem',items,Requestheaders)
   }
   public DeleteItem(id:number):Observable<any>
   {
@@ -38,4 +40,12 @@ public ViewItems():Observable<Items[]>
   {
     return this.http.get<Items>(this.url+'GetById/'+id,Requestheaders)
   }
+  public GetAllCategories():Observable<Category[]>
+  {
+    return this.http.get<Category[]>(this.url+'GetAllCategories/',Requestheaders)
+  }
+public GetSub(cid:string):Observable<any>
+{
+  return this.http.get<SubCategory>(this.url+'GetSubCategory/'+cid,Requestheaders)
+}
 }
