@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import{BuyerService} from 'src/app/service/buyer.service';
+import{Items}from 'src/app/Models/items';
+import { Router } from '@angular/router';
+import{Buyer}from 'src/app/Models/buyer';
+import { FormGroup, FormBuilder } from '@angular/forms';
+
+
+
 
 @Component({
   selector: 'app-buyer-landing-page',
@@ -6,8 +14,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./buyer-landing-page.component.css']
 })
 export class BuyerLandingPageComponent implements OnInit {
+  itemlist:Items[];
+  searchform:FormGroup;
 
-  constructor() { }
+  constructor(private formbuilder:FormBuilder,private service:BuyerService,private route:Router) { }
 
   ngOnInit() {
   }
@@ -19,4 +29,12 @@ export class BuyerLandingPageComponent implements OnInit {
       x.className = "topnav";
     }
   }
+  search(name:string)
+  {
+    this.service.SearchItemByName(name).subscribe(res=>{
+      this.itemlist=res;
+      console.log(this.itemlist);
+    })
+
+}
 }

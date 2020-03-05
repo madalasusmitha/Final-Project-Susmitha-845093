@@ -149,6 +149,11 @@ namespace Emart.BuyerService.Models
                     .HasMaxLength(500)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Image)
+                    .HasColumnName("image")
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.ItemName)
                     .HasColumnName("item_name")
                     .HasMaxLength(50)

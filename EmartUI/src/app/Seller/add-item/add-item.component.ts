@@ -12,13 +12,13 @@ import { SubCategory } from 'src/app/Models/sub-category';
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit {
-  
   itemForm:FormGroup;
   submitted=false;
   list1:Items[];
   item:Items;
   clist:Category[];
   sclist:SubCategory[];
+  image:string;
   constructor(private frombuilder:FormBuilder ,private service:ItemService) { 
     this.service.GetAllCategories().subscribe(res=>{
       this.clist=res;
@@ -30,14 +30,15 @@ export class AddItemComponent implements OnInit {
   ngOnInit() {
     this.itemForm=this.frombuilder.group({
       // id:['',[Validators.required]],
-      // Sid:['',[Validators.required]],
-      CategoryId:['',[Validators.required]],
-      subcategoryid:['',[Validators.required]],
+      Sid:['',[Validators.required]],
+      categoryId:['',[Validators.required]],
+      subcategoryId:['',[Validators.required]],
       price:['',Validators.required],
       itemname:['',Validators.required],
       description:['',Validators.required],
       StockNumber:['',Validators.required],
-      remarks:['',Validators.required]
+      remarks:['',Validators.required],
+      image:['']
     });
   }
   get f(){return this.itemForm.controls;}
@@ -64,13 +65,14 @@ export class AddItemComponent implements OnInit {
     //  this.item.Sid=this.itemForm.value["Sid"];
     this.item.id='add'+Math.round(Math.random()*100);
     this.item.Sid=this.itemForm.value["Sid"];
-    this.item.CategoryId=this.itemForm.value["CategoryId"];
-     this.item.subcategoryid=this.itemForm.value["subcategoryid"];
+    this.item.CategoryId=this.itemForm.value["categoryId"];
+     this.item.subcategoryid=this.itemForm.value["subcategoryId"];
      this.item.itemname=this.itemForm.value["itemname"];
      this.item.price=Number(this.itemForm.value["price"]);
      this.item.description=this.itemForm.value["description"];
     this.item.StockNumber=Number(this.itemForm.value["StockNumber"]);
-    this.item.remarks=this.itemForm.value["remarks"]
+    this.item.remarks=this.itemForm.value["remarks"];
+    this.item.image=this.image;
      console.log(this.item);
      this.service.AddItem(this.item).subscribe(res=>{
        console.log('Record Added')
@@ -81,12 +83,14 @@ export class AddItemComponent implements OnInit {
     }
     GetSubCategory()
   {
-    let cid=this.itemForm.value["categoryid"];
+    let cid=this.itemForm.value["categoryId"];
     console.log(cid);
     this.service. GetSub(cid).subscribe(res=>{
       this.sclist=res;
       console.log(this.sclist);
     })
   }
+  fileEvent(event){
+    this.image = event.target.files[0].name;
+}
   }
-

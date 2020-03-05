@@ -35,6 +35,7 @@ export class ViewItemComponent implements OnInit {
       this.submitted = false;
       this.itemForm.reset();
   }
+  
   Update()
   {
     this.item=new Items();

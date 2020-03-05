@@ -20,6 +20,7 @@ namespace Emart.AccountService.Models
         public decimal StockNumber { get; set; }
         public string Remarks { get; set; }
         public string Sid { get; set; }
+        public string Image { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual Seller S { get; set; }

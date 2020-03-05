@@ -33,40 +33,4 @@
                </table>
                </div>
                </div>
-               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-               <div class="modal-dialog" role="document" id="exampleModal">
-                 <div class="modal-content" style="width:120%;">
-                   <div class="modal-header">
-                     <h5 class="modal-title" id="exampleModalLabel">Edit items</h5>
-                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                       <span aria-hidden="true">&times;</span>
-                     </button>
-                   </div>
-                   <div class="modal-body" id="exampleModal">
-                     <form *ngFor="let item of list">
-                       <div class="form-group">
-                         <label for="Itemname" class="col-form-label">ItemName</label>
-                         <input type="text" class="form-control" id="Itemname" value="{{item.itemname}}"/>
-                       </div>
-                       <div class="form-group">
-                         <label for="price" class="col-form-label">Price</label>
-                         <input type="text" class="form-control" id="price" value="{{item.price}}"/>
-                       </div>
-                       <div class="form-group">
-                         <label for="stock-number" class="col-form-label">Stock Number</label>
-                         <input type="number" class="form-control" id="stockno" value="{{item.stockno}}"/>
-                       </div>
-                       <div class="form-group">
-                         <label for="Description" class="col-form-label">Description</label>
-                         <textarea class="form-control" id="message-text" value="{{item.description}}"></textarea>
-                       </div>
-                     </form>
-                   </div>
-                   <div class="modal-footer">
-                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                     <button type="button" class="btn btn-primary" (click)="Update(id)">Save Changes</button>
-                   </div>
-                 </div>
-               </div>
                
-  

@@ -44,8 +44,8 @@ public ViewItems():Observable<Items[]>
   {
     return this.http.get<Category[]>(this.url+'GetAllCategories/',Requestheaders)
   }
-public GetSub(cid:string):Observable<any>
+public GetSub(id:string):Observable<SubCategory[]>
 {
-  return this.http.get<SubCategory>(this.url+'GetSubCategory/'+cid,Requestheaders)
+  return this.http.get<any>(this.url+'GetSubCategory/'+id,Requestheaders)
 }
 }

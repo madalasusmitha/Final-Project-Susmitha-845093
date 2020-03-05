@@ -10,7 +10,7 @@
 <body >
 
     <div class="topnav">
-        <a class="active"  href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a class="active"  [routerLink]="['Home']"><i class="fa fa-fw fa-home"></i>Home</a>
         <a [routerLink]="['Additem']" routerLinkActive="router-link-active" ><span class="glyphicon glyphicon-sunglasses"> </span>  Add item</a>
         <a [routerLink]="['Viewitems']" routerLinkActive="router-link-active" ><span class="glyphicon glyphicon-time"> </span>  viewitems</a>
         <a [routerLink]="['sellerviewprofile']" routerLinkActive="router-link-active" ><i class="fa fa-fw fa-user"></i>ViewProfile</a>

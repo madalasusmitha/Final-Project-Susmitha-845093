@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
         // this.seller.username=this.loginform.value["username"]
         // this.seller.password=this.loginform.value["password"]
         // console.log(this.seller)
-        let username=this.login1Form.value['username'];
+  let username=this.login1Form.value['username'];
   let password=this.login1Form.value['password'];
   let role=this.login1Form.value['role'];
   // alert(username)

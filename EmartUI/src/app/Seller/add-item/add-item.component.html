@@ -9,52 +9,28 @@
                         <div *ngIf="f.id.errors.required">id is required</div>
                     </div></td>
                 </tr> -->
-                    <!-- <tr>
+                    <tr>
                         <td><label>Seller ID</label></td>
                         <td><input type="text" formControlName="Sid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Sid.errors }" />
                         <div *ngIf="submitted && f.Sid.errors" class="invalid-feedback">
                             <div *ngIf="f.Sid.errors.required">id is required</div>
                         </div></td>
-                    </tr> -->
+                    </tr>
                     <tr>
                         <td><label style="color:red">Choose Category</label></td>
                         <!-- <input type="text" formControlName="categoryId" class="form-control" /> -->
                        <td> <select formControlName="categoryId" class="form-control" (change)="GetSubCategory()">
-                             <option *ngFor="let item of clist" value="{{item.categoryId}}">{{item.categoryName}}</option>   
+                             <option *ngFor="let i of clist" value="{{i.categoryId}}">{{i.categoryName}}</option>   
                         </select></td>
                        </tr>
                        <br>
-                       <tr>
-                        <br>
                         <tr>
                         <td> <label style="color:red">Choose SubCategory</label></td>
                          <!-- <input type="text" formControlName="subcategoryId" class="form-control" /> -->
-                          <td> <select formControlName="subcategoryid" class="form-control">
-                             <option *ngFor="let item of sclist" value="{{item.subcategoryId}}">{{item.subcategoryName}}</option>   
+                          <td> <select formControlName="subcategoryId" class="form-control">
+                             <option *ngFor="let item1 of sclist" value="{{item1.subcategoryId}}">{{item1.subcategoryName}}</option>   
                         </select></td>
                         </tr>
-                    <!-- <tr >
-                        <td><label for="categoryname" class="label">Category Name</label></td>
-                      <td> <select formControlName="categoryid" class="form-control" (change)="GetAllSubCategories()">
-                        <option *ngFor="let item of categorylist" value={{item.cid}}>{{item.cname}}</option>   
-                   </select></td>
-                    <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
-                        <div *ngIf="f.categoryid.errors.required">Category is required</div>
-                      
-                    </div> 
-                    </tr> -->
-                    <!-- <tr>
-                        <tr>
-                            <td><label for="subcategoryname" class="label">Sub Category Name</label></td>
-                        <td>       <select formControlName="subcategoryid" class="form-control">
-                         <option *ngFor="let item of subcategorylist" value={{item.subid}}>{{item.subname}}</option>   
-                    </select>
-                    </td>
-                               <div *ngIf="submitted && f.subcategoryid.errors" class="invalid-feedback">
-                               <div *ngIf="f.subcategoryid.errors.required">Sub Category is required</div>
-                     </div> 
-                           </tr>
-                            -->
                 <tr>
                     <td><label>Price</label></td>
                     <td><input type="number" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
@@ -91,13 +67,24 @@
                     <div *ngIf="f.remarks.errors.required">give remark</div>
                 </div></td>
             </tr>
+            <tr>
+                <td><label>Image</label></td>
+                <td><input type="file" formControlName="image" (change)="fileEvent($event)">
+                <br><br>
+                <div *ngFor="let items of item">
+                    <div>
+                        <img src='assets/images/{{items.image}}' style="height: 150px; width:150px;"><br>
+                        Name:{{items.itemName}}
+                    </div>
+                </div> 
+            </td>
+            </tr>
                 <div class="text-center">
-                <button class="btn btn-primary mr-1" type="submit" (click)='onSubmit()'>Add</button>
+                <button class="btn btn-primary mr-1" type="submit" >Add</button>
                 <button class="btn btn-primary mr-1" type="reset" (click)='onReset()'>Reset</button>
             </div>
         </table>
         </form>
 </div>
-<router-outlet></router-outlet>
 
 
