@@ -15,16 +15,39 @@ export class ViewItemComponent implements OnInit {
   list:Items[];
   item:Items;
   seller:Seller
+  isShow:boolean=true;
+
   constructor(private service:ItemService,private formBuilder:FormBuilder) { 
-    this.service.ViewItems().subscribe(res=>{
-      this.list=res;
-      console.log(this.list);
-    },err=>{
-      console.log(err)
-    })
+    let seller=localStorage.getItem('seller')
+    this.service.ViewItems(seller).subscribe(res=>
+      {
+        this.list=res;
+        console.log(this.list);
+      },
+      err=>{
+        console.log(err);
+      });
+    // this.service.ViewItems().subscribe(res=>{
+    //   this.list=res;
+    //   console.log(this.list);
+    // },err=>{
+    //   console.log(err)
+    // })
   }
 
-  ngOnInit(){}
+ngOnInit(){
+  this.itemForm=this.formBuilder.group({
+    id:[''],
+    itemName:[''],
+    price:[''],
+  description:[''],
+  StockNumber:[''],
+  Sid:[''],
+  subcategoryId:[''],
+  categoryId:[''],
+   remarks:['']
+  });
+}
 
   get f() { return this.itemForm.controls; }
 
@@ -36,6 +59,38 @@ export class ViewItemComponent implements OnInit {
       this.itemForm.reset();
   }
   
+  GetItem(itemid:string)
+  {
+      this.service.GetItem(itemid).subscribe(res=>
+         {
+           this.item=res;
+           console.log("get");
+           console.log(this.item);
+           console.log('Id Found');
+           //console.log(res);
+           this.itemForm.setValue(
+             {
+               id:this.item.id,
+               itemName:this.item.itemName,
+               price:this.item.price,
+               description:this.item.description,
+               StockNumber:this.item.StockNumber,
+               sellerid:this.item.Sid,
+               categoryId:this.item.CategoryId,
+               subcategoryId:this.item.subcategoryid,
+               remarks:this.item.remarks,
+               
+             }
+           )
+         },
+         err=>
+         {
+           console.log(err);
+         }
+       )
+      
+     }
+    
   Update()
   {
     this.item=new Items();
@@ -43,7 +98,7 @@ export class ViewItemComponent implements OnInit {
     this.item.CategoryId=this.itemForm.value["CategoryId"];
     this.item.subcategoryid=this.itemForm.value["subcategoryid"];
     this.item.price=Number(this.itemForm.value["price"]);
-    this.item.itemname=this.itemForm.value["itemname"];
+    this.item.itemName=this.itemForm.value["itemName"];
     this.item.description=this.itemForm.value["description"];
     this.item.StockNumber=Number(this.itemForm.value["StockNumber"]);
     this.item.remarks=this.itemForm.value["remarks"];
@@ -63,4 +118,3 @@ export class ViewItemComponent implements OnInit {
     })
   }
   }
-

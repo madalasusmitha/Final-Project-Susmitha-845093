@@ -4,7 +4,7 @@ export class Items {
     CategoryId:string;
     subcategoryid:string;
     price:number;
-    itemname:string;
+    itemName:string;
     description:string;
     StockNumber:number;
     remarks:string;

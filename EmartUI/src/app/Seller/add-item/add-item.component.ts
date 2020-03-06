@@ -34,7 +34,7 @@ export class AddItemComponent implements OnInit {
       categoryId:['',[Validators.required]],
       subcategoryId:['',[Validators.required]],
       price:['',Validators.required],
-      itemname:['',Validators.required],
+      itemName:['',Validators.required],
       description:['',Validators.required],
       StockNumber:['',Validators.required],
       remarks:['',Validators.required],
@@ -67,7 +67,7 @@ export class AddItemComponent implements OnInit {
     this.item.Sid=this.itemForm.value["Sid"];
     this.item.CategoryId=this.itemForm.value["categoryId"];
      this.item.subcategoryid=this.itemForm.value["subcategoryId"];
-     this.item.itemname=this.itemForm.value["itemname"];
+     this.item.itemName=this.itemForm.value["itemname"];
      this.item.price=Number(this.itemForm.value["price"]);
      this.item.description=this.itemForm.value["description"];
     this.item.StockNumber=Number(this.itemForm.value["StockNumber"]);

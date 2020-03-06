@@ -1,30 +1,52 @@
-<p>buyer-view-profile works!</p>
-<div class="card m-1" style="width:100%;align-items: center;">
-    <div class="container">
-        <table class="table table-bordered">
-            <tr>
-                <th>id</th>
-                <th>username</th>
-                <th>password</th>
-                <th>emailid</th>
-                <th>mobilenumber</th>
-                <th>createddatetime</th>
-            </tr>
-            <tr *ngFor="let item of list">
-               <td>{{item.id}}</td>
-                <td>{{item.username}}</td>
-               <td>{{item.password}}</td>
-               <td>{{item.emailid}}</td> 
-               <td>{{item.mobilenumber}}</td>
-               <td>{{item.createddatetime}}</td>
-               
-               <td>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (Click)="Update()">
-                   Edit
-                  </button></td>
+<div class="bg" >
+    <div class="cen">
+        <div class="container card col-md-4">
+            <div class="card-body">
+             <form [formGroup]="editform" (ngSubmit)="onSubmit()">
                 
-                 </tr>
-                 </table>
+                     
+                     <div class="form-group col-9">
+                         <label style="font-size:25px">User Name</label>
+                         <input type="text" formControlName="username" class="form-control" />
+                         <!-- <div *ngIf="submit && f.username.errors" class="invalid-feedback">
+                             <div *ngIf="f.username.errors.required">Name is required</div>
+                             <div *ngIf="f.username.errors.pattern">Enter only alphabets</div>
+                         </div> -->
+                     </div>
+                     <div class="form-group col-9">
+                         <label style="font-size:25px">id</label>
+                         <input type="text" formControlName="id" class="form-control"  />
+                         <!-- <div *ngIf="submit && f.companyname.errors" class="invalid-feedback">
+                             <div *ngIf="f.companyname.errors.required">Company Name is required</div>
+                             <div *ngIf="f.companyname.errors.pattern">Enter only alphabets</div>
+                         </div> -->
+                     </div>
+                 <div class="form-group col-9">
+                     <label style="font-size:25px">Mobile</label>
+                    
+                     <input type="text" formControlName="mobilenumber" class="form-control" />
+                     <!-- <div *ngIf="submit && f.contactno.errors" class="invalid-feedback">
+                         <div *ngIf="f.contactno.errors.required">Mobile no is required</div>
+                         <div *ngIf="f.contactno.errors.pattern">Mobile no Must be Valid</div>
+                     </div> -->
                  </div>
+                 <div class="form-group col-9">
+                     <label style="font-size:25px">Email</label>
+                     <input type="text" formControlName="emailid" class="form-control" />
+                     <!-- <div *ngIf="submit && f.emailid.errors" class="invalid-feedback">
+                         <div *ngIf="f.emailid.errors.required">Email is required</div>
+                         <div *ngIf="f.emailid.errors.email">Email must be a valid email address</div>
+                     </div> -->
                  </div>
-                 
+                     <div class="text-center">
+                       <button class="btn btn-primary mr-1">Update</button>
+                      
+                     
+                     </div>
+             </form>
+         </div>
+        
+    </div>
+     
+ </div>
+ </div>

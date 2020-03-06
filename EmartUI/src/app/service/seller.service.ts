@@ -13,12 +13,13 @@ export class SellerService {
   url:string='http://localhost:53804/Seller/'
 
   constructor(private http:HttpClient) { }
-  public ViewProfile(id:string):Observable<any>
+  public GetById(id:any):Observable<Seller>
   {
-      return this.http.get<any>(this.url+'GetById/'+id,Requestheaders);
+      return this.http.get<Seller>(this.url+'GetById/'+id,Requestheaders);
   }
-  public Update(seller:Seller):Observable<any>
+  public Update(seller:Seller):Observable<Seller>
   {
-    return this.http.put<any>(this.url+'Seller/EditProfile',seller,Requestheaders);
+    return this.http.put<Seller>(this.url+'Update',seller,Requestheaders);
   }
+
 }

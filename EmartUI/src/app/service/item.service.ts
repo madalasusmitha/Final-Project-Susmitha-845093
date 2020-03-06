@@ -21,9 +21,13 @@ public AddItem(item:Items):Observable<any>
   return this.http.post<any>(this.url+'AddItem',item)
 }
 
-public ViewItems():Observable<Items[]>
+public ViewItems(id:string):Observable<Items[]>
 {
-   return this.http.get<Items[]>(this.url+'ViewItems',Requestheaders);
+   return this.http.get<Items[]>(this.url+'ViewItems/'+id,Requestheaders);
+}
+public GetAllItems():Observable<Items[]>
+{
+  return this.http.get<Items[]>(this.url+'GetAllitems',Requestheaders);
 }
   
   public UpdateItem(items:Items):Observable<any>
@@ -48,4 +52,8 @@ public GetSub(id:string):Observable<SubCategory[]>
 {
   return this.http.get<any>(this.url+'GetSubCategory/'+id,Requestheaders)
 }
+public GetItem(id:string):Observable<Items>
+  {
+    return this.http.get<Items>(this.url+'getitem/'+id,Requestheaders)
+  }
 }

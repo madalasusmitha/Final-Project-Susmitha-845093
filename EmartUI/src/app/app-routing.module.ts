@@ -39,7 +39,7 @@ const routes: Routes = [{path:'Adminlandingpage',component:AdminLandingPageCompo
 {path:'Buyerlandingpage',component:BuyerLandingPageComponent
 ,children:[
 {path:'Buyproduct',component:BuyProductComponent},
-{path:'serach',component:SearchingComponent},
+{path:'search',component:SearchingComponent},
 {path:'purchasehistory',component:PurchaseHistoryComponent},
 {path:'viewcart',component:ViewcartComponent},
 {path:'buyerviewprofile',component:BuyerViewProfileComponent}

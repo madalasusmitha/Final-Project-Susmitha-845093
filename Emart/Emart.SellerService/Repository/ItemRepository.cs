@@ -51,7 +51,12 @@ namespace Emart.SellerService.Repository
             _context.SaveChanges();
         }
 
-        public List<Items> viewitems()
+        public List<Items> viewitems(string sid)
+        {
+            return _context.Items.Where(e=>e.Sid==sid).ToList();
+        }
+
+        public List<Items> Viewitems()
         {
             return _context.Items.ToList();
         }

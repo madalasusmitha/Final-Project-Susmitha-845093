@@ -4,29 +4,22 @@
         <div class="card-body" >
         <form class="form-3" [formGroup]="addcategoryform" (ngSubmit)="onSubmit()">
 
-            <div class="form-group col-md-5 offset-4 ">
+            <!-- <div class="form-group col-md-5 offset-4 ">
                     <label>CategoryID</label>
                     <input type="text" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }">
                        <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
                         <div *ngIf="f.categoryid.errors.required">ID is required</div>
                     </div>
-           </div>
+           </div> -->
 
-           <div class="form-group col-md-5 offset-4">
-            <label>CategoryName:</label>
-            <select formControlName="categoryname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryname.errors }">
-                <option value=""></option>
-                <option value="Clothes">Clothes</option>
-                <option value="Electronics">Electronics</option>
-                <option value="Accessories">Accessories</option>
-                <option value="Grocery">Grocery</option>
-                <option value="kids">Kids</option>
-            </select>
-            <div *ngIf="submitted && f.Categoryname.errors" class="invalid-feedback">
-                <div *ngIf="f.categoryname.errors.required"> categoryname is required</div>
-                <div *ngIf="f.categoryname.errors.pattern">Enter only Alphabets</div>
+           <div class="form-group col-md-5 offset-4 ">
+            <label style="font-size:25px">Category Name</label>
+            <input type="text" formControlName="categoryname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryname.errors }" />
+            <div *ngIf="submitted && f.categoryname.errors" class="invalid-feedback">
+                <div *ngIf="f.categoryname.errors.required">Name is required</div>
+                
             </div>
-        </div>
+     </div>
 
        <div class="form-group col-md-5 offset-4">
             <label>briefdetails</label>

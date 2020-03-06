@@ -40,6 +40,12 @@ export class AddSubCategoryComponent implements OnInit {
   onSubmit() {
       this.submitted = true;
       this.Add();
+      if(this.addSubcategoryform.valid)
+      {
+        alert("Success")
+        console.log(JSON.stringify(this.addSubcategoryform.value));
+        
+      }
       
   }
 

@@ -34,12 +34,12 @@ namespace Emart.SellerService.Controllers
         }
         
         [HttpGet]
-        [Route("ViewItems")]
-        public IActionResult viewitems()
+        [Route("ViewItems/{id}")]
+        public IActionResult viewitems(string id)
         {
             try
             {
-                return Ok(_repo.viewitems());
+                return Ok(_repo.viewitems(id));
             }
             catch (Exception e)
             {
@@ -53,6 +53,19 @@ namespace Emart.SellerService.Controllers
             try
             {
                 return Ok(_repo.GetCategories());
+            }
+            catch (Exception e)
+            {
+                return Ok(e.InnerException.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetAllitems")]
+        public IActionResult get(Items obj)
+        {
+            try
+            {
+                return Ok(_repo.Viewitems());
             }
             catch (Exception e)
             {
