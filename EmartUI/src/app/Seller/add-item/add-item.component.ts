@@ -30,13 +30,13 @@ export class AddItemComponent implements OnInit {
   ngOnInit() {
     this.itemForm=this.frombuilder.group({
       // id:['',[Validators.required]],
-      Sid:['',[Validators.required]],
+      sid:['',[Validators.required]],
       categoryId:['',[Validators.required]],
       subcategoryId:['',[Validators.required]],
       price:['',Validators.required],
       itemName:['',Validators.required],
       description:['',Validators.required],
-      StockNumber:['',Validators.required],
+      stockNumber:['',Validators.required],
       remarks:['',Validators.required],
       image:['']
     });
@@ -64,13 +64,13 @@ export class AddItemComponent implements OnInit {
     //  this.item.id=this.itemForm.value["id"];
     //  this.item.Sid=this.itemForm.value["Sid"];
     this.item.id='add'+Math.round(Math.random()*100);
-    this.item.Sid=this.itemForm.value["Sid"];
-    this.item.CategoryId=this.itemForm.value["categoryId"];
-     this.item.subcategoryid=this.itemForm.value["subcategoryId"];
-     this.item.itemName=this.itemForm.value["itemname"];
+    this.item.sid=this.itemForm.value["sid"];
+    this.item.categoryId=this.itemForm.value["categoryId"];
+     this.item.subcategoryId=this.itemForm.value["subcategoryId"];
+     this.item.itemName=this.itemForm.value["itemName"];
      this.item.price=Number(this.itemForm.value["price"]);
      this.item.description=this.itemForm.value["description"];
-    this.item.StockNumber=Number(this.itemForm.value["StockNumber"]);
+    this.item.stockNumber=Number(this.itemForm.value["stockNumber"]);
     this.item.remarks=this.itemForm.value["remarks"];
     this.item.image=this.image;
      console.log(this.item);

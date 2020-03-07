@@ -32,6 +32,46 @@ namespace Emart.BuyerService.Controllers
                 return NotFound(ex.Message);
             }
         }
+        [Route("AddCart")]
+        public IActionResult AddCart(Cart item)
+        {
+            try
+            {
+                _repo.AddtoCart(item);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetCartItems")]
+        public IActionResult get(string bid)
+        {
+            try
+            {
+                return Ok(_repo.GetCartItems(bid));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpDelete]
+        [Route("Delete")]
+        public IActionResult Delete(string cartid)
+        {
+            try
+            {
+                _repo.DeleteCartItem(cartid);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
         [HttpPut]
         [Route("EditProfile")]
         public IActionResult Editprofile(Buyer item)
@@ -79,6 +119,32 @@ namespace Emart.BuyerService.Controllers
             try
             {
                 return Ok(_repo.SearchItemByName(item_name));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetAllItems")]
+        public IActionResult get()
+        {
+            try
+            {
+                return Ok(_repo.GetAllItems());
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetCategories")]
+        public IActionResult getcategory( )
+        {
+            try
+            {
+                return Ok(_repo.GetCategories());
             }
             catch (Exception ex)
             {

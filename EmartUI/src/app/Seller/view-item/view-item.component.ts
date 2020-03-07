@@ -27,12 +27,7 @@ export class ViewItemComponent implements OnInit {
       err=>{
         console.log(err);
       });
-    // this.service.ViewItems().subscribe(res=>{
-    //   this.list=res;
-    //   console.log(this.list);
-    // },err=>{
-    //   console.log(err)
-    // })
+    
   }
 
 ngOnInit(){
@@ -41,8 +36,8 @@ ngOnInit(){
     itemName:[''],
     price:[''],
   description:[''],
-  StockNumber:[''],
-  Sid:[''],
+  stockNumber:[''],
+  sid:[''],
   subcategoryId:[''],
   categoryId:[''],
    remarks:['']
@@ -74,10 +69,10 @@ ngOnInit(){
                itemName:this.item.itemName,
                price:this.item.price,
                description:this.item.description,
-               StockNumber:this.item.StockNumber,
-               sellerid:this.item.Sid,
-               categoryId:this.item.CategoryId,
-               subcategoryId:this.item.subcategoryid,
+               stockNumber:this.item.stockNumber,
+               sid:this.item.sid,
+               categoryId:this.item.categoryId,
+               subcategoryId:this.item.subcategoryId,
                remarks:this.item.remarks,
                
              }
@@ -95,14 +90,14 @@ ngOnInit(){
   {
     this.item=new Items();
     this.item.id=this.itemForm.value["id"];
-    this.item.CategoryId=this.itemForm.value["CategoryId"];
-    this.item.subcategoryid=this.itemForm.value["subcategoryid"];
+    this.item.categoryId=this.itemForm.value["categoryId"];
+    this.item.subcategoryId=this.itemForm.value["subcategoryid"];
     this.item.price=Number(this.itemForm.value["price"]);
     this.item.itemName=this.itemForm.value["itemName"];
     this.item.description=this.itemForm.value["description"];
-    this.item.StockNumber=Number(this.itemForm.value["StockNumber"]);
+    this.item.stockNumber=Number(this.itemForm.value["stockNumber"]);
     this.item.remarks=this.itemForm.value["remarks"];
-    this.item.Sid=this.itemForm.value["Sid"];
+    this.item.sid=this.itemForm.value["sid"];
     console.log(this.item);
     this.service.UpdateItem(this.item).subscribe(res=>
       {

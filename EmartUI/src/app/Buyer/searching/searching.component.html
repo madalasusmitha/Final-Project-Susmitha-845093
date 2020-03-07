@@ -22,19 +22,21 @@ tr,td{
 }
 </style>
 &nbsp;<br>
+<div class="bg" >
+    <div class="offset-4 col-3">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
 <form id="g" [formGroup]="searchform" >
     <div class="box">
         <input type="search" id="search" formControlName="itemname" placeholder="Search" />
     <button type="button" (click)="search()" >search</button>
   </div>
   </form>
+  <br/>
   <section  class="box1" style="align-content: center;">
     <table class="box" style="background-color:black;">
         <tr *ngFor="let item of list">
-            <th>{{item.itemname}}</th>
-            
-         
-           
+            <th>{{item.itemname}}</th>  
         </tr>
         <tr *ngFor="let item of list">
            <td> <img src='/assets/Images/{{item.image}}' style="height:150px; width:150px;"><br>
@@ -42,7 +44,9 @@ tr,td{
           Name: {{item.itemName}}<br>
           Stock : {{item.stockNumber}}<br>
           <button id="bt1" (click)="buy()" >Buy</button><br><br>
-          <button id="bt2">Add To Cart</button></td>
+          <p><button (click)="AddtoCart(i)">Add to Cart</button></p>
         </tr>
     </table>
   </section>
+  </div>
+  </div>

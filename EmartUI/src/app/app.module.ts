@@ -28,7 +28,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './Account/home/home.component';
 import { ViewcategoryComponent } from './Admin/viewcategory/viewcategory.component';
 import { ViewSubcategoryComponent } from './Admin/view-subcategory/view-subcategory.component';
-import { EditprofileComponent } from './Seller/editprofile/editprofile.component'
+import { EditprofileComponent } from './Seller/editprofile/editprofile.component';
+import { LogoutComponent } from './Account/logout/logout.component'
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { EditprofileComponent } from './Seller/editprofile/editprofile.component
     HomeComponent,
     ViewcategoryComponent,
     ViewSubcategoryComponent,
-    EditprofileComponent
+    EditprofileComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

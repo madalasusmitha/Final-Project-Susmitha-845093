@@ -23,6 +23,7 @@ import { ViewcartComponent } from './Buyer/viewcart/viewcart.component';
 import { HomeComponent } from './Account/home/home.component';
 import { ViewSubcategoryComponent } from './Admin/view-subcategory/view-subcategory.component';
 import { ViewcategoryComponent } from './Admin/viewcategory/viewcategory.component';
+import { LogoutComponent } from './Account/logout/logout.component';
 
 
 const routes: Routes = [{path:'Adminlandingpage',component:AdminLandingPageComponent
@@ -42,7 +43,8 @@ const routes: Routes = [{path:'Adminlandingpage',component:AdminLandingPageCompo
 {path:'search',component:SearchingComponent},
 {path:'purchasehistory',component:PurchaseHistoryComponent},
 {path:'viewcart',component:ViewcartComponent},
-{path:'buyerviewprofile',component:BuyerViewProfileComponent}
+{path:'buyerviewprofile',component:BuyerViewProfileComponent},
+{path:'Logout',component:LogoutComponent}
 ]},
 {path:'sellerlandingpage',component:SellerLandingPageComponent
 ,children:[
@@ -53,7 +55,8 @@ const routes: Routes = [{path:'Adminlandingpage',component:AdminLandingPageCompo
 
 ]},
 {path:'Home',component:HomeComponent,children:[
-{path:'Login',component:LoginComponent}
+{path:'Login',component:LoginComponent},
+{path:'Logout',component:LogoutComponent}
 ]},
 
 {path:'',redirectTo:'Login',pathMatch:"full"},

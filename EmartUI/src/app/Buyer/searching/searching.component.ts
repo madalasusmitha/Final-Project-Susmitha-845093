@@ -4,6 +4,7 @@ import { ItemService } from 'src/app/service/item.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Items } from 'src/app/Models/items';
+import { Cart } from 'src/app/Models/cart';
 
 @Component({
   selector: 'app-searching',
@@ -15,6 +16,8 @@ export class SearchingComponent implements OnInit {
 list:Items[];
 items:Items;
 list1:Items[];
+itemlist:Items[];
+cart:Cart;
 
 constructor(private service:BuyerService,private itemservice:ItemService,private router:Router,
     private formbuilder:FormBuilder) { }
@@ -50,15 +53,35 @@ search()
     console.log(err);
   })
 }
-buy()
+buy(item2:Items)
 {
+  console.log(item2);
+  localStorage.setItem('item1',JSON.stringify(item2));
   this.router.navigateByUrl('Buyerlandingpage/Buyproduct');
   
 }
-addtocart()
-{
-
+AddtoCart(item2:Items){
+  console.log(item2);
+ this.cart=new Cart();
+ this.cart.cartid='EMCR'+Math.round(Math.random()*100);
+ this.cart.itemid=item2.id;
+ this.cart.itemname=item2.itemName;
+ this.cart.categoryid=item2.categoryId;
+ this.cart.subcategoryid=item2.subcategoryId
+ this.cart.stocknumber=item2.stockNumber;
+ this.cart.price=item2.price;
+ this.cart.description=item2.description;
+ this.cart.remarks=item2.remarks;
+ this.cart.sellerid=item2.sid;
+ this.cart.image=item2.image;
+ this.cart.Buyerid= localStorage.getItem('buyer');
+ console.log(this.cart);
+ this.service.AddtoCart(this.cart).subscribe(res=>{
+   console.log("Record added To Cart");
+   alert('Item has been Added To Cart');
+ })
 }
+
 
 }
 

@@ -1,28 +1,28 @@
 <div class="bg" >
-    <div class="cen">
+    <div class="offset-4 col-8">
         <div class="container card col-md-4">
             <div class="card-body">
              <form [formGroup]="editform" (ngSubmit)="onSubmit()">
                 
                      
-                     <div class="form-group col-9">
-                         <label style="font-size:25px">User Name</label>
+                     <div class="form-group col-14">
+                         <label style="font-size:20px">User Name</label>
                          <input type="text" formControlName="username" class="form-control" />
                          <!-- <div *ngIf="submit && f.username.errors" class="invalid-feedback">
                              <div *ngIf="f.username.errors.required">Name is required</div>
                              <div *ngIf="f.username.errors.pattern">Enter only alphabets</div>
                          </div> -->
                      </div>
-                     <div class="form-group col-9">
-                         <label style="font-size:25px">id</label>
+                     <div class="form-group col-14">
+                         <label style="font-size:20px">id</label>
                          <input type="text" formControlName="id" class="form-control"  />
                          <!-- <div *ngIf="submit && f.companyname.errors" class="invalid-feedback">
                              <div *ngIf="f.companyname.errors.required">Company Name is required</div>
                              <div *ngIf="f.companyname.errors.pattern">Enter only alphabets</div>
                          </div> -->
                      </div>
-                 <div class="form-group col-9">
-                     <label style="font-size:25px">Mobile</label>
+                 <div class="form-group col-14">
+                     <label style="font-size:20px">Mobile</label>
                     
                      <input type="text" formControlName="mobilenumber" class="form-control" />
                      <!-- <div *ngIf="submit && f.contactno.errors" class="invalid-feedback">
@@ -30,8 +30,8 @@
                          <div *ngIf="f.contactno.errors.pattern">Mobile no Must be Valid</div>
                      </div> -->
                  </div>
-                 <div class="form-group col-9">
-                     <label style="font-size:25px">Email</label>
+                 <div class="form-group col-14">
+                     <label style="font-size:20px">Email</label>
                      <input type="text" formControlName="emailid" class="form-control" />
                      <!-- <div *ngIf="submit && f.emailid.errors" class="invalid-feedback">
                          <div *ngIf="f.emailid.errors.required">Email is required</div>

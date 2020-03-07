@@ -1,4 +1,5 @@
 <div class="register" align="center">
+    <div class="card-body">
     <h3 align ="center">ADD ITEM</h3>
         <form [formGroup]="itemForm" (ngSubmit)="onSubmit()" align="center">
             <table>
@@ -11,7 +12,7 @@
                 </tr> -->
                     <tr>
                         <td><label>Seller ID</label></td>
-                        <td><input type="text" formControlName="Sid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Sid.errors }" />
+                        <td><input type="text" formControlName="sid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Sid.errors }" />
                         <div *ngIf="submitted && f.Sid.errors" class="invalid-feedback">
                             <div *ngIf="f.Sid.errors.required">id is required</div>
                         </div></td>
@@ -40,7 +41,7 @@
                 </tr>
                     <tr>
                         <td><label>Item Name</label></td>
-                <td><input type="text" formControlName="itemname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.itemname.errors }" />
+                <td><input type="text" formControlName="itemName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.itemname.errors }" />
                 <div *ngIf="submitted && f.itemname.errors" class="invalid-feedback">
                     <div *ngIf="f.itemname.errors.required"> enter item name</div>
                 </div></td>
@@ -55,7 +56,7 @@
 
             <tr>
                 <td><label>Stock No</label></td>
-                <td><input type="number" formControlName="StockNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.StockNumber.errors }" />
+                <td><input type="number" formControlName="stockNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.StockNumber.errors }" />
                 <div *ngIf="submitted && f.StockNumber.errors" class="invalid-feedback">
                     <div *ngIf="f.StockNumber.errors.required">please enter stock </div>
                 </div></td>
@@ -85,6 +86,7 @@
             </div>
         </table>
         </form>
+</div>
 </div>
 
 

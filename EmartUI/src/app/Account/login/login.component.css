@@ -6,20 +6,19 @@ background-image: url('src/assets/Images/login1.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background:cover;
-height: 1000%;
+height:600px;
+width:auto;
 font-family: 'Numans', sans-serif;
 }
-
 .container{
-height:800px;
+height:450px;
 align-content: center;
 }
-
 .card{
-height: 370px;
+height: 250px;
 margin-top: auto;
 margin-bottom: auto;
-width: 400px;
+width: 300px;
 background-color: rgba(0,0,0,0.5) !important;
 }
 

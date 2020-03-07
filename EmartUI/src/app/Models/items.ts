@@ -1,12 +1,12 @@
 export class Items {
     id:string;
-    Sid:string;
-    CategoryId:string;
-    subcategoryid:string;
+    sid:string;
+    categoryId:string;
+    subcategoryId:string;
     price:number;
     itemName:string;
     description:string;
-    StockNumber:number;
+    stockNumber:number;
     remarks:string;
     image:string;
 }
