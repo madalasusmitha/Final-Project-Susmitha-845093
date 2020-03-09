@@ -11,8 +11,8 @@ namespace Emart.SellerService.Repository
         void Additem(Items obj);
         List<Items> viewitems(string sid);
         List<Items> Viewitems();
-        void Deleteitem(string id);
-        void Updateitem(Items obj);
+       public  void Deleteitem(string id);
+       public  void Updateitem(Items obj);
         Items Getitem(string itemid);
         List<Category> GetCategories();
         List<SubCategory> GetSubCategories(string CategoryId);

@@ -27,10 +27,10 @@ namespace Emart.BuyerService.Repositories
             _context.SaveChanges();
         }
 
-        public void DeleteCartItem(string cartid)
+        public void DeleteCartItem(string Cartid)
         {
-            Cart cart = _context.Cart.Find(cartid);
-            _context.Cart.Remove(cart);
+            Cart i = _context.Cart.Find(Cartid);
+            _context.Remove(i);
             _context.SaveChanges();
 
 

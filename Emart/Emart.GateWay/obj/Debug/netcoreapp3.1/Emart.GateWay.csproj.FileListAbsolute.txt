@@ -47,7 +47,6 @@ E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\bin\Debug\netcoreapp3.1\run
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.csprojAssemblyReference.cache
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\staticwebassets\Emart.GateWay.StaticWebAssets.Manifest.cache
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\staticwebassets\Emart.GateWay.StaticWebAssets.xml
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.MvcApplicationPartsAssemblyInfo.cs

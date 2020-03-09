@@ -18,6 +18,7 @@ items:Items;
 list1:Items[];
 itemlist:Items[];
 cart:Cart;
+isShow:boolean=true;
 
 constructor(private service:BuyerService,private itemservice:ItemService,private router:Router,
     private formbuilder:FormBuilder) { }
@@ -26,20 +27,20 @@ constructor(private service:BuyerService,private itemservice:ItemService,private
     this.searchform=this.formbuilder.group({
       itemname:['']
     })
-   this.ViewItems();
+  // this.ViewItems();
   }
-ViewItems()
-{ 
-  this.itemservice.GetAllItems().subscribe(res=>
-    {
+// ViewItems()
+// { 
+//   this.itemservice.GetAllItems().subscribe(res=>
+//     {
      
-      this.list1=res;
-      console.log(this.list1);
-    },
-    err=>{
-      console.log(err);
-    });
-}
+//       this.list1=res;
+//       console.log(this.list1);
+//     },
+//     err=>{
+//       console.log(err);
+//     });
+// }
 search()
 {
   this.items=new Items();
@@ -53,14 +54,18 @@ search()
     console.log(err);
   })
 }
-buy(item2:Items)
+Show(){
+     this.isShow=!this.isShow;
+  }
+buy(item:Items)
 {
-  console.log(item2);
-  localStorage.setItem('item1',JSON.stringify(item2));
+  console.log(item);
+  localStorage.setItem('item',JSON.stringify(item));
   this.router.navigateByUrl('Buyerlandingpage/Buyproduct');
   
 }
-AddtoCart(item2:Items){
+AddtoCart(item2:Items)
+{
   console.log(item2);
  this.cart=new Cart();
  this.cart.cartid='EMCR'+Math.round(Math.random()*100);
@@ -74,16 +79,15 @@ AddtoCart(item2:Items){
  this.cart.remarks=item2.remarks;
  this.cart.sellerid=item2.sid;
  this.cart.image=item2.image;
- this.cart.Buyerid= localStorage.getItem('buyer');
+ this.cart.Buyerid= localStorage.getItem('Buyer');
  console.log(this.cart);
  this.service.AddtoCart(this.cart).subscribe(res=>{
    console.log("Record added To Cart");
    alert('Item has been Added To Cart');
  })
 }
-
-
 }
+
 
 
 

@@ -33,7 +33,7 @@ export class BuyerService {
   }
   public BuyItem(item:PurchaseHistory):Observable<any>
   {
-      return this.http.post<any>(this.url+'BuyItem',item);
+      return this.http.post<any>(this.url+'BuyItem',item,Requestheaders);
   }
   public AddtoCart(cart:Cart):Observable<any>{
     return this.http.post<any>(this.url+'AddCart',cart,Requestheaders);
@@ -45,7 +45,14 @@ export class BuyerService {
   public GetCategories():Observable<any>{
     return this.http.get<any>(this.url+'GetCategories',Requestheaders);
   }
-  public RemoveCartItem(id:any):Observable<any>{
-    return this.http.delete<any>(this.url+'Delete/'+id,Requestheaders)
+  public RemoveCartItem(id:any):Observable<any>
+  {
+     
+     return this.http.delete<any>(this.url+'Delete/'+id,Requestheaders)
   }
+  public ViewOrders():Observable<any>
+{
+  return this.http.get<any>(this.url+'ViewOrders',Requestheaders);
+}
+ 
 }

@@ -7,7 +7,6 @@ E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\bin\Debug\netcoreapp3.
 E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\bin\Debug\netcoreapp3.1\Emart.BuyerService.runtimeconfig.dev.json
 E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\bin\Debug\netcoreapp3.1\Emart.BuyerService.dll
 E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\bin\Debug\netcoreapp3.1\Emart.BuyerService.pdb
-E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\obj\Debug\netcoreapp3.1\Emart.BuyerService.csprojAssemblyReference.cache
 E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\obj\Debug\netcoreapp3.1\staticwebassets\Emart.BuyerService.StaticWebAssets.Manifest.cache
 E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\obj\Debug\netcoreapp3.1\staticwebassets\Emart.BuyerService.StaticWebAssets.xml
 E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\obj\Debug\netcoreapp3.1\Emart.BuyerService.AssemblyInfoInputs.cache
@@ -121,3 +120,4 @@ E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\bin\Debug\netcoreapp3.
 E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\obj\Debug\netcoreapp3.1\Emart.BuyerService.MvcApplicationPartsAssemblyInfo.cache
+E:\Final-Project-Susmitha-845093\Emart\Emart.BuyerService\obj\Debug\netcoreapp3.1\Emart.BuyerService.csprojAssemblyReference.cache

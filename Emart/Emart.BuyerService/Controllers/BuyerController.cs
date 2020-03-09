@@ -33,20 +33,18 @@ namespace Emart.BuyerService.Controllers
             }
         }
         [Route("AddCart")]
-        public IActionResult AddCart(Cart item)
+        public void AddCart(Cart item)
         {
-            try
-            {
+           
+            
                 _repo.AddtoCart(item);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return NotFound(ex.Message);
-            }
+                Console.WriteLine("Record Added");
+            
+               
+            
         }
         [HttpGet]
-        [Route("GetCartItems")]
+        [Route("GetCartItems/{bid}")]
         public IActionResult get(string bid)
         {
             try
@@ -59,17 +57,18 @@ namespace Emart.BuyerService.Controllers
             }
         }
         [HttpDelete]
-        [Route("Delete")]
-        public IActionResult Delete(string cartid)
+        [Route("Delete/{id}")]
+        public void Delete(string cartid)
         {
             try
             {
                 _repo.DeleteCartItem(cartid);
-                return Ok();
+                Console.WriteLine("item deleted");
+
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
         [HttpPut]
