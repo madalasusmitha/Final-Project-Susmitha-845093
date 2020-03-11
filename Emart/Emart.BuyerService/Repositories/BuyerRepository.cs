@@ -48,10 +48,9 @@ namespace Emart.BuyerService.Repositories
 
         }
 
-        public List<Cart> GetCartItems(string bid)
+        public List<Cart> GetCartItems()
         {
-            List<Cart> item = _context.Cart.Where(i => i.Buyerid == bid).ToList();
-            return item;
+            return _context.Cart.ToList();
         }
 
         public List<Category> GetCategories()

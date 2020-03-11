@@ -16,49 +16,82 @@ import { Buyer } from 'src/app/Models/buyer';
   styleUrls: ['./buy-product.component.css']
 })
 export class BuyProductComponent implements OnInit {
-  form:FormGroup;
   item:Items;
-  purchasehistory:PurchaseHistory;
-  list:PurchaseHistory[]=[];
-  list1:Items[]=[];
-  buyer:Buyer;
+  list:Items[];
   submitted=false;
-  
-  constructor(private service:BuyerService,private formBuilder:FormBuilder,private route:Router) {
-      console.log(this.item);
-     this.item =JSON.stringify(localStorage.getItem('item'));
-      this.list1.push(this.item)
-  console.log(this.item);
-  console.log(this.item.id);
-   }
-  ngOnInit() {
-    this.form=this.formBuilder.group({
+  transaction:PurchaseHistory;
+  buyproductform:FormGroup;
+  constructor(private formbuilder:FormBuilder,private service:ItemService,private buyer:BuyerService,private router:Router){
+  // {  this.service.GetAllItems().subscribe(res=>{
+  //   this.list=res;
+  //   console.log(this.list);
+  // },err=>{
+  //   console.log(err)
+  // })
+}
+        
+
+  ngOnInit() 
+  {
+    this.buyproductform=this.formbuilder.group({
+      itemName:[''],
       TranscationType:[''],
       cardnumber:[''],
-      cvv:[''],
-      expirydate:[''],
-      name:[''],
-      DateTime:[''],
+      CVV:[''],
+      ed:[''],
+      buyername:[''],
+      id:[''],
+      Sellerid:[''],
       NumberOfItems:[''],
+      Itemid:[''],
+      DateTime:[''],
+      Buyerid:[''],
       remarks:['']
     })
-  }
-  onSubmit()
-  {
-     this.purchasehistory=new PurchaseHistory();
-     this.purchasehistory.Id="I"+Math.floor(Math.random()*1000);
-     this.purchasehistory.Buyerid=localStorage.getItem('Buyer');
-     this.purchasehistory.Sellerid=localStorage.getItem('seller');
-     this.purchasehistory.NumberOfItems=this.form.value["NumberOfItems"];
-     this.purchasehistory.Itemid=this.item.id;
-     this.purchasehistory.TranscationType=this.form.value["TranscationType"]
-     this.purchasehistory.DateTime=this.form.value["DateTime"];
-     this.purchasehistory.remarks=this.form.value["remarks"];
-     console.log(this.purchasehistory);
-     this.service.BuyItem(this.purchasehistory).subscribe(res=>{
-       console.log("Purchase was Sucessfull");
-       alert('Purchase Done Successfully');
-     })
-    }
    
+    this.viewdata();
+    
+  }
+  viewdata()
+  {
+    this.item=JSON.parse(localStorage.getItem('item'));
+    console.log(this.item);
+    console.log(this.item.id);
+    this.buyproductform.patchValue({
+        itemName:this.item.itemName,
+      
+      
+    })
+  }
+  purchase()
+  {
+    this.submitted= true;
+    if(this.buyproductform.valid)
+    {
+      console.log(this.item);
+      this.transaction=new PurchaseHistory();
+     this.transaction.Sellerid=this.item.sid;
+      this.transaction.Itemid=this.item.id;
+      this.transaction.NumberOfItems=Number(this.buyproductform.value["NumberOfItems"]);
+      this.transaction.Buyerid=localStorage.getItem("Buyer");
+      this.transaction.DateTime=this.buyproductform.value["DateTime"];
+      this.transaction.TransactionId='T'+Math.round(Math.random()*1000);
+      this.transaction.TranscationType=this.buyproductform.value["TranscationType"];
+      this.transaction.remarks=this.buyproductform.value["remarks"];
+      this.transaction.Id='I'+Math.round(Math.random()*1000);
+      console.log(this.transaction)
+      this.buyer.BuyItem(this.transaction).subscribe(res=>
+        {
+        
+          console.log('Added succesfully');
+          alert('order placed');
+        },err=>{console.log(err)}
+  
+        )
+      }
+
+  }
+ 
+    
+  
 }

@@ -48,11 +48,11 @@ export class BuyerService {
   public RemoveCartItem(id:any):Observable<any>
   {
      
-     return this.http.delete<any>(this.url+'Delete/'+id,Requestheaders)
+    return this.http.delete<any>(this.url+'Delete/'+id,Requestheaders)
   }
-  public ViewOrders():Observable<any>
+  public ViewOrders(id:any):Observable<any>
 {
-  return this.http.get<any>(this.url+'ViewOrders',Requestheaders);
+  return this.http.get<any>(this.url+'PurchaseHistory/'+id,Requestheaders);
 }
  
 }

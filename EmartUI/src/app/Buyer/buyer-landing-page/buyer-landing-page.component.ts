@@ -51,46 +51,9 @@ export class BuyerLandingPageComponent implements OnInit {
 
 
   }
-  // Show(){
-  //   this.isShow=!this.isShow;
-  // }
-  // Buy(product:Items){
-  //   console.log(product);
-  //   localStorage.setItem('product',JSON.stringify(product));
-  //   this.route.navigateByUrl('/buy-product');
-
-  // }
-  // // SearchByCategory(id:string){
-  // //   this.service.GetItemByCategoryId(id).subscribe(res=>{
-  // //     this.list=res;
-  // //     console.log(this.list);
-  // //   })
-
-  // // }
-  // AddtoCart(item2:Items){
-  //   console.log(item2);
-  //  this.cart=new Cart();
-  //  this.cart.cartid='EMCR'+Math.round(Math.random()*100);
-  //  this.cart.itemid=item2.id;
-  //  this.cart.itemname=item2.itemName;
-  //  this.cart.categoryid=item2.categoryId;
-  //  this.cart.subcategoryid=item2.subcategoryId
-  //  this.cart.stocknumber=item2.stockNumber;
-  //  this.cart.price=item2.price;
-  //  this.cart.description=item2.description;
-  //  this.cart.remarks=item2.remarks;
-  //  this.cart.sellerid=item2.sid;
-  //  this.cart.image=item2.image;
-  //  this.cart.Buyerid= localStorage.getItem('buyer');
-  //  console.log(this.cart);
-  //  this.service.AddtoCart(this.cart).subscribe(res=>{
-  //    console.log("Record added To Cart");
-  //    alert('Item has been Added To Cart');
-  //  })
-  // }
-   Logout(){
+  Logout(){
     localStorage.clear();
-    this.route.navigateByUrl('/login')
+    this.route.navigateByUrl('/Home/Login')
   }
 
 }

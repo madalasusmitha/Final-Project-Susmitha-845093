@@ -20,7 +20,8 @@ export class PurchaseHistoryComponent implements OnInit {
       this.list1.push(this.item)
     console.log(this.item);
     console.log(this.item.id);
-      this.service.ViewOrders().subscribe(res=>{
+    let id=localStorage.getItem('Buyer');
+      this.service.ViewOrders(id).subscribe(res=>{
         this.list=res;
         console.log(this.list);
       },err=>{

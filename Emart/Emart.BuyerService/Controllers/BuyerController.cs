@@ -44,12 +44,12 @@ namespace Emart.BuyerService.Controllers
             
         }
         [HttpGet]
-        [Route("GetCartItems/{bid}")]
-        public IActionResult get(string bid)
+        [Route("GetCartItems")]
+        public IActionResult getCart()
         {
             try
             {
-                return Ok(_repo.GetCartItems(bid));
+                return Ok(_repo.GetCartItems());
             }
             catch (Exception ex)
             {
@@ -60,16 +60,11 @@ namespace Emart.BuyerService.Controllers
         [Route("Delete/{id}")]
         public void Delete(string cartid)
         {
-            try
-            {
+         
                 _repo.DeleteCartItem(cartid);
                 Console.WriteLine("item deleted");
 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            
         }
         [HttpPut]
         [Route("EditProfile")]
