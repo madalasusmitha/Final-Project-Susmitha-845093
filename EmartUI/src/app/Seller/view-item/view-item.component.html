@@ -53,13 +53,18 @@
                           <div class="modal-body">
                             <form [formGroup]="itemForm">
                                <div class="form-group ">
-                                    <label>SubcategoryName</label><br>
+                                    <label>subcategoryId</label><br>
                                     <input type="text" formControlName="subcategoryId" class="form-control" readonly /> -->
                                 </div>
                                 <div class="form-group ">
                                     <label>CategoryName</label><br>
                                     <input type="text" formControlName="categoryId" class="form-control" readonly />
                                 </div>
+                                <div class="form-group ">
+                                  <label>subcategory id</label><br>
+                                  <input type="text" formControlName="subcategoryId" class="form-control" readonly />
+                              </div>
+                             
                          <div class="form-group ">
                             <label>SellerId</label><br>
                             <input type="text" formControlName="sid" class="form-control" readonly />
@@ -96,7 +101,20 @@
                             <label>Remarks</label>
                             <textarea formControlName="remarks" class="form-control" required ></textarea>
                             
-                        </div>                
+                        </div>   
+                        <div>
+                          <label>Image</label>
+                          <input type="file" formControlName="image" (change)="fileEvent($event)">
+                          <br><br>
+                          <div *ngFor="let items of item">
+                              <div>
+                                  <img src='assets/images/{{items.image}}' style="height: 150px; width:150px;"><br>
+                                  Name:{{items.itemName}}
+                              </div>
+                          </div> 
+                      
+                        </div>
+                                  
                         
                         
                         <div class="modal-footer">
@@ -104,6 +122,7 @@
                           </div>
                             </form>
                         </div>
+
                         
                         
                       </div>

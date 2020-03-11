@@ -16,6 +16,7 @@ export class ViewItemComponent implements OnInit {
   item:Items;
   seller:Seller
   isShow:boolean=true;
+  image:string;
 
   constructor(private service:ItemService,private formBuilder:FormBuilder) { 
     let seller=localStorage.getItem('seller')
@@ -40,7 +41,8 @@ ngOnInit(){
   sid:[''],
   subcategoryId:[''],
   categoryId:[''],
-   remarks:['']
+   remarks:[''],
+   image:['']
   });
 }
 
@@ -74,6 +76,7 @@ ngOnInit(){
                categoryId:this.item.categoryId,
                subcategoryId:this.item.subcategoryId,
                remarks:this.item.remarks,
+               image:this.item.image,
                
              }
            )
@@ -91,14 +94,15 @@ ngOnInit(){
     this.item=new Items();
     this.item.id=this.itemForm.value["id"];
     this.item.categoryId=this.itemForm.value["categoryId"];
-    this.item.subcategoryId=this.itemForm.value["subcategoryid"];
+    this.item.subcategoryId=this.itemForm.value["subcategoryId"];
     this.item.price=Number(this.itemForm.value["price"]);
     this.item.itemName=this.itemForm.value["itemName"];
     this.item.description=this.itemForm.value["description"];
     this.item.stockNumber=Number(this.itemForm.value["stockNumber"]);
     this.item.remarks=this.itemForm.value["remarks"];
     this.item.sid=this.itemForm.value["sid"];
-    console.log(this.item);
+    this.item.image=this.image;
+        console.log(this.item);
     this.service.UpdateItem(this.item).subscribe(res=>
       {
         console.log('record updated')
@@ -112,4 +116,7 @@ ngOnInit(){
       console.log(err);
     })
   }
+  fileEvent(event){
+    this.image = event.target.files[0].name;
+}
   }

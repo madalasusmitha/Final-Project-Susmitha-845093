@@ -1,0 +1,308 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/madalasusmitha/Final-Project-Susmitha-845093
+ > git.exe init C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR # timeout=10
+Fetching upstream changes from https://github.com/madalasusmitha/Final-Project-Susmitha-845093
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress -- https://github.com/madalasusmitha/Final-Project-Susmitha-845093 +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/madalasusmitha/Final-Project-Susmitha-845093 # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/madalasusmitha/Final-Project-Susmitha-845093 # timeout=10
+Fetching upstream changes from https://github.com/madalasusmitha/Final-Project-Susmitha-845093
+ > git.exe fetch --tags --force --progress -- https://github.com/madalasusmitha/Final-Project-Susmitha-845093 +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 417bb0c81e5481c9ebcaa5e42ab8fa48cf098a58 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 417bb0c81e5481c9ebcaa5e42ab8fa48cf098a58 # timeout=10
+Commit message: "initial fouth"
+First time build. Skipping changelog.
+Finished: SUCCESS
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Started by user admin
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/madalasusmitha/Final-Project-Susmitha-845093 # timeout=10
+Fetching upstream changes from https://github.com/madalasusmitha/Final-Project-Susmitha-845093
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress -- https://github.com/madalasusmitha/Final-Project-Susmitha-845093 +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 417bb0c81e5481c9ebcaa5e42ab8fa48cf098a58 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 417bb0c81e5481c9ebcaa5e42ab8fa48cf098a58 # timeout=10
+Commit message: "initial fouth"
+ > git.exe rev-list --no-walk 417bb0c81e5481c9ebcaa5e42ab8fa48cf098a58 # timeout=10
+[EMARTANGULAR] $ cmd /c call C:\Windows\TEMP\jenkins2157834393904183061.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>cd EmartUI 
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI>npm install  
+
+> core-js@3.6.4 postinstall C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\node_modules\core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> core-js@2.6.11 postinstall C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\node_modules\karma\node_modules\core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> @angular/cli@8.3.25 postinstall C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\node_modules\@angular\cli
+> node ./bin/postinstall/script.js
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\watchpack\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\karma\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\@angular\compiler-cli\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+added 1177 packages from 1050 contributors and audited 19101 packages in 237.704s
+found 1 moderate severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+Finished: SUCCESS
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Started by user admin
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/madalasusmitha/Final-Project-Susmitha-845093 # timeout=10
+Fetching upstream changes from https://github.com/madalasusmitha/Final-Project-Susmitha-845093
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress -- https://github.com/madalasusmitha/Final-Project-Susmitha-845093 +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision d3e9d3bd5f0f397e9aa8490aa4046cc82dc1f541 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f d3e9d3bd5f0f397e9aa8490aa4046cc82dc1f541 # timeout=10
+Commit message: "initial fivth"
+ > git.exe rev-list --no-walk 417bb0c81e5481c9ebcaa5e42ab8fa48cf098a58 # timeout=10
+[EMARTANGULAR] $ cmd /c call C:\Windows\TEMP\jenkins7934247488602839265.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>cd EmartUI 
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI>npm install  
+npm WARN bootstrap@4.4.1 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+npm WARN bootstrap@4.4.1 requires a peer of popper.js@^1.16.0 but none is installed. You must install peer dependencies yourself.
+npm WARN karma-jasmine-html-reporter@1.5.2 requires a peer of jasmine-core@>=3.5 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\watchpack\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\karma\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\@angular\compiler-cli\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+audited 19101 packages in 15.964s
+found 1 moderate severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+[EMARTANGULAR] $ cmd /c call C:\Windows\TEMP\jenkins7459209268970354390.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>cd EmartUI 
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI>npm run ng -- build --prod 
+
+> emart-ui@0.0.0 ng C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI
+> ng "build" "--prod"
+
+Generating ES5 bundles for differential loading...
+ES5 bundle generation complete.
+
+chunk {0} runtime-es2015.c5fa8325f89fc516600b.js (runtime) 1.45 kB [entry] [rendered]
+chunk {0} runtime-es5.c5fa8325f89fc516600b.js (runtime) 1.45 kB [entry] [rendered]
+chunk {2} polyfills-es2015.5b10b8fd823b6392f1fd.js (polyfills) 36.2 kB [initial] [rendered]
+chunk {3} polyfills-es5.8e50a9832860f7cf804a.js (polyfills-es5) 126 kB [initial] [rendered]
+chunk {1} main-es2015.c7c4de4a75968f0d47ea.js (main) 463 kB [initial] [rendered]
+chunk {1} main-es5.c7c4de4a75968f0d47ea.js (main) 533 kB [initial] [rendered]
+chunk {4} styles.c100542209ff0e079c93.css (styles) 154 kB [initial] [rendered]
+Date: 2020-03-11T11:40:54.451Z - Hash: 61431ede4ed5579679b9 - Time: 52469ms
+Finished: SUCCESS
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Started by user admin
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/madalasusmitha/Final-Project-Susmitha-845093 # timeout=10
+Fetching upstream changes from https://github.com/madalasusmitha/Final-Project-Susmitha-845093
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress -- https://github.com/madalasusmitha/Final-Project-Susmitha-845093 +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision d3e9d3bd5f0f397e9aa8490aa4046cc82dc1f541 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f d3e9d3bd5f0f397e9aa8490aa4046cc82dc1f541 # timeout=10
+Commit message: "initial fivth"
+ > git.exe rev-list --no-walk d3e9d3bd5f0f397e9aa8490aa4046cc82dc1f541 # timeout=10
+[EMARTANGULAR] $ cmd /c call C:\Windows\TEMP\jenkins145863346322055010.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>cd EmartUI 
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI>npm install  
+npm WARN bootstrap@4.4.1 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+npm WARN bootstrap@4.4.1 requires a peer of popper.js@^1.16.0 but none is installed. You must install peer dependencies yourself.
+npm WARN karma-jasmine-html-reporter@1.5.2 requires a peer of jasmine-core@>=3.5 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\watchpack\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\karma\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\@angular\compiler-cli\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+audited 19101 packages in 12.022s
+found 1 moderate severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+[EMARTANGULAR] $ cmd /c call C:\Windows\TEMP\jenkins1611487318229896049.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>cd EmartUI 
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI>npm run ng -- build --prod 
+
+> emart-ui@0.0.0 ng C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI
+> ng "build" "--prod"
+
+Generating ES5 bundles for differential loading...
+ES5 bundle generation complete.
+
+chunk {3} polyfills-es5.8e50a9832860f7cf804a.js (polyfills-es5) 126 kB [initial] [rendered]
+chunk {1} main-es2015.c7c4de4a75968f0d47ea.js (main) 463 kB [initial] [rendered]
+chunk {1} main-es5.c7c4de4a75968f0d47ea.js (main) 533 kB [initial] [rendered]
+chunk {0} runtime-es2015.c5fa8325f89fc516600b.js (runtime) 1.45 kB [entry] [rendered]
+chunk {0} runtime-es5.c5fa8325f89fc516600b.js (runtime) 1.45 kB [entry] [rendered]
+chunk {2} polyfills-es2015.5b10b8fd823b6392f1fd.js (polyfills) 36.2 kB [initial] [rendered]
+chunk {4} styles.c100542209ff0e079c93.css (styles) 154 kB [initial] [rendered]
+Date: 2020-03-11T11:45:34.139Z - Hash: 61431ede4ed5579679b9 - Time: 19842ms
+[EMARTANGULAR] $ cmd /c call C:\Windows\TEMP\jenkins6445171745736064030.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>xcopy /s "C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI" "C:\inetpub\wwwroot\EMART"  
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI\3rdpartylicenses.txt
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI\index.html
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI\login1.5bf16260e9745c9efb33.jpg
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI\main-es2015.c7c4de4a75968f0d47ea.js
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI\main-es5.c7c4de4a75968f0d47ea.js
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI\polyfills-es2015.5b10b8fd823b6392f1fd.js
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI\polyfills-es5.8e50a9832860f7cf804a.js
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI\runtime-es2015.c5fa8325f89fc516600b.js
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI\runtime-es5.c5fa8325f89fc516600b.js
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI\styles.c100542209ff0e079c93.css
+10 File(s) copied
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>C:\Windows\System32\iisreset.exe
+
+Attempting stop...
+
+Internet services successfully stopped
+
+Attempting start...
+
+Internet services successfully restarted
+
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>exit 0 
+Finished: SUCCESS
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Started by user admin
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/madalasusmitha/Final-Project-Susmitha-845093 # timeout=10
+Fetching upstream changes from https://github.com/madalasusmitha/Final-Project-Susmitha-845093
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress -- https://github.com/madalasusmitha/Final-Project-Susmitha-845093 +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision d3e9d3bd5f0f397e9aa8490aa4046cc82dc1f541 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f d3e9d3bd5f0f397e9aa8490aa4046cc82dc1f541 # timeout=10
+Commit message: "initial fivth"
+ > git.exe rev-list --no-walk d3e9d3bd5f0f397e9aa8490aa4046cc82dc1f541 # timeout=10
+[EMARTANGULAR] $ cmd /c call C:\Windows\TEMP\jenkins3719134295340764870.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>cd EmartUI 
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI>npm install  
+npm WARN bootstrap@4.4.1 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+npm WARN bootstrap@4.4.1 requires a peer of popper.js@^1.16.0 but none is installed. You must install peer dependencies yourself.
+npm WARN karma-jasmine-html-reporter@1.5.2 requires a peer of jasmine-core@>=3.5 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\watchpack\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\karma\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\@angular\compiler-cli\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+audited 19101 packages in 11.705s
+found 1 moderate severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+[EMARTANGULAR] $ cmd /c call C:\Windows\TEMP\jenkins289270035930779577.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>cd EmartUI 
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI>npm run ng -- build --prod 
+
+> emart-ui@0.0.0 ng C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI
+> ng "build" "--prod"
+
+Generating ES5 bundles for differential loading...
+ES5 bundle generation complete.
+
+chunk {2} polyfills-es2015.5b10b8fd823b6392f1fd.js (polyfills) 36.2 kB [initial] [rendered]
+chunk {3} polyfills-es5.8e50a9832860f7cf804a.js (polyfills-es5) 126 kB [initial] [rendered]
+chunk {0} runtime-es2015.c5fa8325f89fc516600b.js (runtime) 1.45 kB [entry] [rendered]
+chunk {0} runtime-es5.c5fa8325f89fc516600b.js (runtime) 1.45 kB [entry] [rendered]
+chunk {1} main-es2015.c7c4de4a75968f0d47ea.js (main) 463 kB [initial] [rendered]
+chunk {1} main-es5.c7c4de4a75968f0d47ea.js (main) 533 kB [initial] [rendered]
+chunk {4} styles.c100542209ff0e079c93.css (styles) 154 kB [initial] [rendered]
+Date: 2020-03-11T11:47:53.494Z - Hash: 61431ede4ed5579679b9 - Time: 19423ms
+[EMARTANGULAR] $ cmd /c call C:\Windows\TEMP\jenkins1442079296373091684.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>xcopy /s "C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR\EmartUI\dist\EmartUI" "C:\inetpub\wwwroot\EMART"  
+Overwrite C:\inetpub\wwwroot\EMART\3rdpartylicenses.txt (Yes/No/All)? 
+Overwrite C:\inetpub\wwwroot\EMART\3rdpartylicenses.txt (Yes/No/All)? 
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>C:\Windows\System32\iisreset.exe
+
+Attempting stop...
+
+Internet services successfully stopped
+
+Attempting start...
+
+Internet services successfully restarted
+
+
+C:\Program Files (x86)\Jenkins\workspace\EMARTANGULAR>exit 0 
+Finished: SUCCESS
+
+
