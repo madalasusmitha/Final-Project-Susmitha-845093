@@ -21,7 +21,7 @@ Items:Buyer[];
 item:Buyer;
 submitted=false
 
-  constructor(private formBuilder:FormBuilder,private service:AccountService) {
+  constructor(private formBuilder:FormBuilder,private service:AccountService,private route:Router) {
   }
   ngOnInit() {
     this.registerForm=this.formBuilder.group({
@@ -63,6 +63,11 @@ submitted=false
      })
 
     }
+    Logout(){
+      localStorage.clear();
+      this.route.navigateByUrl('/Home/Login')
+    }
+  
   
 }
 

@@ -57,3 +57,4 @@ E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Ema
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.csproj.CopyComplete
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.dll
 E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.pdb
+E:\Final-Project-Susmitha-845093\Emart\Emart.GateWay\obj\Debug\netcoreapp3.1\Emart.GateWay.csprojAssemblyReference.cache

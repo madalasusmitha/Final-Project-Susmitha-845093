@@ -20,12 +20,13 @@ export class ViewcartComponent implements OnInit {
      }
     ngOnInit() {
     }
-  BuyNow(item1:Items){
-        console.log(item1);
-        this.item=item1;
-        localStorage.setItem('item1',JSON.stringify(this.item));
-        this.route.navigateByUrl('Buyerlandingpage/Buyproduct');
-  }
+    buy(item:Items)
+    {
+      console.log(item);
+      localStorage.setItem('item',JSON.stringify(item));
+      this.route.navigateByUrl('Buyerlandingpage/Buyproduct');
+      
+    }
   Remove(itemid:string)
   {
     console.log(itemid);

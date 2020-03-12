@@ -127,4 +127,3 @@ E:\Final-Project-Susmitha-845093\Emart\Emart.AccountService\bin\Debug\netcoreapp
 E:\Final-Project-Susmitha-845093\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 E:\Final-Project-Susmitha-845093\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 E:\Final-Project-Susmitha-845093\Emart\Emart.AccountService\obj\Debug\netcoreapp3.1\Emart.AccountService.MvcApplicationPartsAssemblyInfo.cache
-E:\Final-Project-Susmitha-845093\Emart\Emart.AccountService\obj\Debug\netcoreapp3.1\Emart.AccountService.csprojAssemblyReference.cache

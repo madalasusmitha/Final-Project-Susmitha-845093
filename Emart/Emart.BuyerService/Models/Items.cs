@@ -23,9 +23,6 @@ namespace Emart.BuyerService.Models
         public string Sid { get; set; }
         public string Image { get; set; }
 
-        public virtual Category Category { get; set; }
-        public virtual Seller S { get; set; }
-        public virtual SubCategory Subcategory { get; set; }
         public virtual ICollection<Cart> Cart { get; set; }
         public virtual ICollection<Discounts> Discounts { get; set; }
         public virtual ICollection<PurchaseHistory> PurchaseHistory { get; set; }

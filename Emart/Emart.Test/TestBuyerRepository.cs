@@ -79,7 +79,7 @@ namespace Emart.Test
 
         public void TestCartItems()
         {
-            var result = _repo.GetCartItems("EMCR27");
+            var result = _repo.GetCartItems();
             Assert.IsNotNull(result);
         }
         [Test]
@@ -123,9 +123,9 @@ namespace Emart.Test
         [Description("to test delete cart items")]
         public void TestTodelete()
         {
-            _repo.DeleteCartItem("EMCR94");
-            var result = _repo.GetCartItems("EMCR27");
-            Assert.Null(result);
+             _repo.DeleteCartItem("EMCR27");
+           
+            
         }
 
 

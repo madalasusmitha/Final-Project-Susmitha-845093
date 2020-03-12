@@ -8,7 +8,6 @@ namespace Emart.BuyerService.Models
         public SubCategory()
         {
             Cart = new HashSet<Cart>();
-            Items = new HashSet<Items>();
         }
 
         public string SubcategoryId { get; set; }
@@ -17,8 +16,6 @@ namespace Emart.BuyerService.Models
         public string BriefDetails { get; set; }
         public int Gst { get; set; }
 
-        public virtual Category Category { get; set; }
         public virtual ICollection<Cart> Cart { get; set; }
-        public virtual ICollection<Items> Items { get; set; }
     }
 }

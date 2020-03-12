@@ -17,6 +17,5 @@ namespace Emart.AdminService.Models
 
         public virtual Buyer Buyer { get; set; }
         public virtual Items Item { get; set; }
-        public virtual Seller Seller { get; set; }
     }
 }

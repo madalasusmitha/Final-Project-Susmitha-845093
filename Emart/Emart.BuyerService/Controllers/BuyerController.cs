@@ -60,9 +60,16 @@ namespace Emart.BuyerService.Controllers
         [Route("Delete/{id}")]
         public void Delete(string cartid)
         {
-         
+            try
+            {
                 _repo.DeleteCartItem(cartid);
                 Console.WriteLine("item deleted");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
 
             
         }

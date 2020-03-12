@@ -12,9 +12,9 @@
                 </tr> -->
                     <tr>
                         <td><label>Seller ID</label></td>
-                        <td><input type="text" formControlName="sid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Sid.errors }" />
-                        <div *ngIf="submitted && f.Sid.errors" class="invalid-feedback">
-                            <div *ngIf="f.Sid.errors.required">id is required</div>
+                        <td><input type="text" formControlName="sid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sid.errors }" />
+                        <div *ngIf="submitted && f.sid.errors" class="invalid-feedback">
+                            <div *ngIf="f.sid.errors.required">id is required</div>
                         </div></td>
                     </tr>
                     <tr>
@@ -41,9 +41,9 @@
                 </tr>
                     <tr>
                         <td><label>Item Name</label></td>
-                <td><input type="text" formControlName="itemName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.itemname.errors }" />
-                <div *ngIf="submitted && f.itemname.errors" class="invalid-feedback">
-                    <div *ngIf="f.itemname.errors.required"> enter item name</div>
+                <td><input type="text" formControlName="itemName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.itemName.errors }" />
+                <div *ngIf="submitted && f.itemName.errors" class="invalid-feedback">
+                    <div *ngIf="f.itemName.errors.required"> enter item name</div>
                 </div></td>
             </tr>
             <tr>
@@ -56,9 +56,9 @@
 
             <tr>
                 <td><label>Stock No</label></td>
-                <td><input type="number" formControlName="stockNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.StockNumber.errors }" />
-                <div *ngIf="submitted && f.StockNumber.errors" class="invalid-feedback">
-                    <div *ngIf="f.StockNumber.errors.required">please enter stock </div>
+                <td><input type="number" formControlName="stockNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.stockNumber.errors }" />
+                <div *ngIf="submitted && f.stockNumberr.errors" class="invalid-feedback">
+                    <div *ngIf="f.stockNumber.errors.required">please enter stock </div>
                 </div></td>
             </tr>
             <tr>

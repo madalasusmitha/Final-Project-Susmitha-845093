@@ -134,26 +134,31 @@ namespace Emart.AccountService.Models
                 entity.HasOne(d => d.Buyer)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.Buyerid)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__cart__Buyerid__4D94879B");
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.Categoryid)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__cart__categoryid__4AB81AF0");
 
                 entity.HasOne(d => d.Item)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.Itemid)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__cart__itemid__49C3F6B7");
 
                 entity.HasOne(d => d.Seller)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.Sellerid)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__cart__sellerid__4CA06362");
 
                 entity.HasOne(d => d.Subcategory)
                     .WithMany(p => p.Cart)
                     .HasForeignKey(d => d.Subcategoryid)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__cart__subcategor__4BAC3F29");
             });
 
@@ -269,21 +274,6 @@ namespace Emart.AccountService.Models
                     .HasColumnName("subcategory_id")
                     .HasMaxLength(50)
                     .IsUnicode(false);
-
-                entity.HasOne(d => d.Category)
-                    .WithMany(p => p.Items)
-                    .HasForeignKey(d => d.CategoryId)
-                    .HasConstraintName("FK__Items__category___1DE57479");
-
-                entity.HasOne(d => d.S)
-                    .WithMany(p => p.Items)
-                    .HasForeignKey(d => d.Sid)
-                    .HasConstraintName("FK__Items__sid__34C8D9D1");
-
-                entity.HasOne(d => d.Subcategory)
-                    .WithMany(p => p.Items)
-                    .HasForeignKey(d => d.SubcategoryId)
-                    .HasConstraintName("FK__Items__subcatego__1ED998B2");
             });
 
             modelBuilder.Entity<PurchaseHistory>(entity =>
@@ -333,17 +323,14 @@ namespace Emart.AccountService.Models
                 entity.HasOne(d => d.Buyer)
                     .WithMany(p => p.PurchaseHistory)
                     .HasForeignKey(d => d.Buyerid)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__PurchaseH__Buyer__267ABA7A");
 
                 entity.HasOne(d => d.Item)
                     .WithMany(p => p.PurchaseHistory)
                     .HasForeignKey(d => d.Itemid)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__PurchaseH__Itemi__286302EC");
-
-                entity.HasOne(d => d.Seller)
-                    .WithMany(p => p.PurchaseHistory)
-                    .HasForeignKey(d => d.Sellerid)
-                    .HasConstraintName("FK__PurchaseH__Selle__276EDEB3");
             });
 
             modelBuilder.Entity<Seller>(entity =>
@@ -435,11 +422,6 @@ namespace Emart.AccountService.Models
                     .HasColumnName("subcategory_name")
                     .HasMaxLength(50)
                     .IsUnicode(false);
-
-                entity.HasOne(d => d.Category)
-                    .WithMany(p => p.SubCategory)
-                    .HasForeignKey(d => d.CategoryId)
-                    .HasConstraintName("FK__SubCatego__categ__1A14E395");
             });
 
             OnModelCreatingPartial(modelBuilder);

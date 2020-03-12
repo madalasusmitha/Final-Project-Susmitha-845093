@@ -26,7 +26,7 @@ export class RegisterSellerComponent implements OnInit {
   Items:Seller[];
 item:Seller;
 
-  constructor(private formBuilder:FormBuilder,private service:AccountService) {
+  constructor(private formBuilder:FormBuilder,private service:AccountService,private route:Router) {
     this.registersellerform=this.formBuilder.group({
       // id:['',[Validators.required]],
       username:['',[Validators.required]],
@@ -75,6 +75,10 @@ item:Seller;
      })
 
   
+}
+Logout(){
+  localStorage.clear();
+  this.route.navigateByUrl('/Home/Login')
 }
 }
 
