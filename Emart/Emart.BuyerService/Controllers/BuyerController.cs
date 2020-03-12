@@ -33,15 +33,21 @@ namespace Emart.BuyerService.Controllers
             }
         }
         [Route("AddCart")]
-        public void AddCart(Cart item)
+        public IActionResult AddCart(Cart item)
         {
-           
-            
+
+            try
+            {
                 _repo.AddtoCart(item);
-                Console.WriteLine("Record Added");
-            
-               
-            
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+
+
+
         }
         [HttpGet]
         [Route("GetCartItems")]
@@ -57,17 +63,19 @@ namespace Emart.BuyerService.Controllers
             }
         }
         [HttpDelete]
-        [Route("Delete/{id}")]
-        public void Delete(string cartid)
+        [Route("Delete/{cartid}")]
+        public IActionResult Delete(string cartid)
         {
             try
             {
                 _repo.DeleteCartItem(cartid);
-                Console.WriteLine("item deleted");
+                return Ok();
+                
             }
-            catch(Exception e)
+            catch(Exception ex)
             {
-                Console.WriteLine(e.Message);
+                return NotFound(ex.InnerException.Message);
+
             }
 
 

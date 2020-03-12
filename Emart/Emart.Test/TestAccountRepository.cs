@@ -22,9 +22,9 @@ namespace Emart.Test
         {
             _repo.RegisterSeller(new Seller()
             {
-                Id = "EMARTSEL123",
-                Username = "prasu",
-                Password = "chinna",
+                Id = "EMARTSEL134",
+                Username = "pra",
+                Password = "chinnu",
                 Companyname = "infosys",
                 Contactnumber = "9000326398",
                 Emailid = "prasu@123.com",
@@ -42,10 +42,10 @@ namespace Emart.Test
         {
             _repo.RegisterBuyer(new Buyer()
             {
-                Id = "EmartBuy123",
+                Id = "EmartBuy132",
                 Createddatetime = System.DateTime.Now,
-                Username = "vijay",
-                Password = "sush",
+                Username = "vijaya",
+                Password = "sushu",
                 Emailid = "vijaysush@gmail.com",
                 Mobilenumber = "8142070133"
             });
