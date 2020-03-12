@@ -21,7 +21,7 @@ namespace Emart.Test
         {
             _repo.AddtoCart(new Cart()
             {
-                Cartid = "Emcr60",
+                Cartid = "Emcr06",
                 Itemid = "add34",
                 Categoryid = "C101",
                 Subcategoryid = "cs103",
@@ -42,12 +42,12 @@ namespace Emart.Test
         {
             _repo.BuyItem(new PurchaseHistory()
             {
-                Id = "45",
+                Id = "47",
                 Buyerid = "234",
                 Sellerid = "21",
-                TransactionId = "345",
+                TransactionId = "347",
                 TranscationType = "cashondelivery",
-                Itemid = "add82",
+                Itemid = "add97",
                 NumberOfItems = 78,
                 DateTime = System.DateTime.Now,
                 Remarks="none"
@@ -123,7 +123,7 @@ namespace Emart.Test
         [Description("to test delete cart items")]
         public void TestTodelete()
         {
-             _repo.DeleteCartItem("EMCR27");
+             _repo.DeleteCartItem("Emcr06");
            
             
         }

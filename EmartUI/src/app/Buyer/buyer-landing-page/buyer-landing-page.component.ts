@@ -27,15 +27,14 @@ export class BuyerLandingPageComponent implements OnInit {
   category:string;
 
   constructor(private formbuilder:FormBuilder,private service:BuyerService,private route:Router) {
-    // this.service.GetCategories().subscribe(res=>{
-    //   this.clist=res;
-    //   console.log(this.clist);
-    // })
-    // this.service.GetAllItems().subscribe(res=>{
-    //   this.list=res;
-    //   console.log(this.list);
-      
-    // })
+    if(localStorage.getItem('Buyer'))
+    {
+
+    }
+    else{
+      this.route.navigateByUrl('/Home/Login')
+    }
+    
   }
   ngOnInit() {
     this.searchform=this.formbuilder.group({

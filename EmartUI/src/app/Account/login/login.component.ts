@@ -90,6 +90,7 @@ this.service.loginseller(username,password).subscribe(res=>{token=res;console.lo
 }
 if(username=="Admin" && password=="admin")
 {
+  localStorage.setItem("Admin",username);
   alert('admin is logged in');
   this.route.navigateByUrl("Adminlandingpage");
 }

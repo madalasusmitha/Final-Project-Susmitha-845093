@@ -20,8 +20,8 @@ namespace Emart.Test
         {
             _repo.AddCategory(new Category()
             {
-                CategoryId="C130",
-                CategoryName="fashion",
+                CategoryId="C0",
+                CategoryName="girlsfashion",
                 BriefDetails="show some love to your loved ones"
             });
             
@@ -31,9 +31,9 @@ namespace Emart.Test
         {
             _repo.AddSubcategory(new SubCategory()
             {
-                SubcategoryId = "cs104",
-                SubcategoryName = "electronic",
-                CategoryId = "C130",
+                SubcategoryId = "c04",
+                SubcategoryName = "chudidars",
+                CategoryId = "C0",
                 BriefDetails = "lovable keychains to your loved ones",
                 Gst = 20
 

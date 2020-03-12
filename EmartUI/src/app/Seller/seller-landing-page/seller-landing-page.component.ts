@@ -8,7 +8,15 @@ import { Router } from '@angular/router';
 })
 export class SellerLandingPageComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  constructor(private route:Router) {
+    if(localStorage.getItem('seller'))
+    {
+
+    }
+    else{
+      this.route.navigateByUrl('/Home/Login')
+    }
+   }
 
   ngOnInit() {
   }
