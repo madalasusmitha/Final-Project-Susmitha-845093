@@ -63,6 +63,7 @@ namespace Emart.BuyerService.Repositories
             return _context.Buyer.Find(id);
         }
 
+        
         public List<PurchaseHistory> PurchaseHistory(string bid)
         {
             List<PurchaseHistory> item = _context.PurchaseHistory.Where(i => i.Buyerid== bid).ToList();

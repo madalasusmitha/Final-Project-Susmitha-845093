@@ -30,7 +30,7 @@ export class AddItemComponent implements OnInit {
   ngOnInit() {
     this.itemForm=this.frombuilder.group({
       // id:['',[Validators.required]],
-      sid:['',[Validators.required]],
+     // sid:['',[Validators.required]],
       categoryId:['',[Validators.required]],
       subcategoryId:['',[Validators.required]],
       price:['',Validators.required],
@@ -64,7 +64,7 @@ export class AddItemComponent implements OnInit {
     //  this.item.id=this.itemForm.value["id"];
     //  this.item.Sid=this.itemForm.value["Sid"];
     this.item.id='add'+Math.round(Math.random()*100);
-    this.item.sid=this.itemForm.value["sid"];
+    this.item.sid=localStorage.getItem('seller')
     this.item.categoryId=this.itemForm.value["categoryId"];
      this.item.subcategoryId=this.itemForm.value["subcategoryId"];
      this.item.itemName=this.itemForm.value["itemName"];

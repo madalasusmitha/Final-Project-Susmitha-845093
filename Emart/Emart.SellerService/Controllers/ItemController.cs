@@ -75,16 +75,16 @@ namespace Emart.SellerService.Controllers
 
         [HttpDelete]
         [Route("Deleteitem/{id}")]
-        public void Deleteitem(string id)
+        public IActionResult Deleteitem(string id)
         {
             try
             {
                 _repo.Deleteitem(id);
-                Console.WriteLine("item deleted");
+                return Ok();
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.InnerException.Message);
+                return Ok(e.InnerException.Message);
             }
         }
         [HttpPut]
